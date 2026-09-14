@@ -24,9 +24,20 @@
 6. [API Service Layer & Pydantic Schemas (`api/`)](#6-api-service-layer--pydantic-schemas-api)
    - [FastAPI Service Architecture](#fastapi-service-architecture)
    - [Complete Endpoints Specification](#complete-endpoints-specification)
-7. [Frontend Interactive Dashboard & Visual Text Formatter (`index.html`)](#7-frontend-interactive-dashboard--visual-text-formatter-indexhtml)
-8. [Testing, Benchmarks & Validation](#8-testing-benchmarks--validation)
+7. [Full-Stack Web Portals & Role-Based Interfaces (`web/` & `index.html`)](#7-full-stack-web-portals--role-based-interfaces-web--indexhtml)
+   - [Next.js 14 Role-Based Administrative Portals](#nextjs-14-role-based-administrative-portals)
+   - [Citizen Transparency Portal](#citizen-transparency-portal)
+   - [Inbuilt FastAPI Analytics Dashboard (`index.html`)](#inbuilt-fastapi-analytics-dashboard-indexhtml)
+8. [Testing, Benchmarks & End-to-End Validation](#8-testing-benchmarks--end-to-end-validation)
+   - [Core Model Test Suite (`test_integration.py` — 36 Tests)](#1-core-model-test-suite-test_integrationpy--36-tests)
+   - [API Integration Test Suite (`test_api.py` — 21 Tests)](#2-api-integration-test-suite-test_apipy--21-tests)
+   - [Full-Stack E2E Automated Verification (`verify_e2e.py`)](#3-full-stack-e2e-automated-verification-verify_e2epy)
 9. [Installation, Setup & Local Operations](#9-installation-setup--local-operations)
+   - [Multi-Tier Architecture Overview](#multi-tier-architecture-overview)
+   - [Prerequisites & Environment Setup](#prerequisites--environment-setup)
+   - [Launching the Full Stack](#launching-the-full-stack)
+   - [Pre-Configured Demo Login Credentials](#pre-configured-demo-login-credentials)
+
 
 ---
 
@@ -386,23 +397,63 @@ The FastAPI service exposes RESTful endpoints with automatic OpenAPI / Swagger i
 
 ---
 
-## 7. Frontend Interactive Dashboard & Visual Text Formatter (`index.html`)
+## 7. Full-Stack Web Portals & Role-Based Interfaces (`web/` & `index.html`)
 
-The interactive web dashboard at `/dashboard` is designed using glassmorphic design principles with customized CSS and Vanilla JavaScript.
+The MPLADS Platform provides two complementary frontend presentation tiers:
+1. **Next.js 14 Role-Based Enterprise Application** (`web/` on port `3000`): Full interactive governance suite with dedicated portals for all 4 statutory administrative tiers + a public Citizen transparency portal.
+2. **Inbuilt Glassmorphic FastAPI Analytics Dashboard** (`mplads_ai/api/static/index.html` on port `8000`): Instant single-file dashboard for model diagnostics, raw payload inspections, and real-time inference testing.
 
-### Human-Readable Visual Text Formatting
-Rather than dumping raw JSON strings, all model execution panels render rich visual cards and styled lists:
-- **Executive Badges**: High-contrast pills for risk levels (`LOW RISK` in emerald, `MEDIUM RISK` in amber, `HIGH RISK` in rose).
-- **Factor Breakdown Lists**: Each factor displayed with full title, explanation text, and weighted contribution badge (matching the platform's anomaly breakdown format).
-- **3-Column Verification Panels**: Extracted invoice figures (amount, date, vendor) with confidence indicators and side-by-side sanction diffs.
-- **Alert Callout Blocks**: Semantic warning cards for public safety emergencies and audit discrepancies.
-- **Developer Inspection Accordion**: Collapsible `<details><summary>View Raw JSON Payload</summary></details>` toggle at the bottom of each card for underlying payload inspection.
+### Next.js 14 Role-Based Administrative Portals
+
+Built with **Next.js 14 App Router, React 18, TailwindCSS, Lucide Icons, and Recharts**, styled with high-contrast glassmorphism, animated transitions, and telemetry widgets:
+
+#### 1. District Collector Dashboard (`/dashboard/district`)
+- **Case Queue Tab**: Live SLA ticking timers, prioritized risk-scored cases, instant audit bundling with one-click actioning (Approve, Escalate, Dismiss with mandatory rationale).
+- **Works & Audits Tab**: Searchable, filterable table of 12,937 projects with physical vs. financial progress bars and anomaly badges.
+- **Vendor Scorecards Tab**: Contractor performance tracking, historical delay rates, and cartel association markers.
+- **Evidence Vault Tab**: Geotagged progress photos, OCR invoice scans, and side-by-side sanction diffs.
+- **Action History Tab**: Immutable audit trail of officer decisions, dismissals, and escalations.
+
+#### 2. Member of Parliament (MP) Dashboard (`/dashboard/mp`)
+- **Constituency Overview Tab**: Total ₹5 Cr entitlement vs. sanctioned allocation progress bars, expenditure velocity, and pace-vs-expected indicators.
+- **Sanctioned Works List Tab**: Real-time physical completion milestone tracking with interactive category breakdowns.
+- **Transparency Scorecard Tab**: Constituency accountability grade (A+ through D), grievance resolution rate, and benchmark comparisons.
+- **Press Brief Generator Tab**: One-click generation of citizen-facing press releases and social media constituency milestone summaries.
+- **Constituency Settings Tab**: Nodal district links and notification preferences.
+
+#### 3. State Nodal Officer Dashboard (`/dashboard/state`)
+- **State Heatmap & Overview Tab**: Cross-district expenditure velocity, allocation distribution, and bottleneck flags across all state constituencies.
+- **District Comparisons Tab**: Inter-district performance benchmarking and normalized administrative capacity indices.
+- **SLA Escalation Queue Tab**: Overdue alerts escalated from District Collectors requiring state intervention.
+- **Category Cost Benchmarks Tab**: Outlier detection against state-wide civil works unit-cost ranges.
+
+#### 4. MoSPI Union Ministry National Dashboard (`/dashboard/ministry`)
+- **National KPI Ribbon**: Consolidated ₹2,842.15 Cr capital monitoring across 543 Lok Sabha seats.
+- **Top-N Risk Queue**: Cross-state high-severity anomalies, ghost works, and invoice amount inflation alerts.
+- **Double-Funding Matrix**: Cross-scheme collision detection (MPLADS vs. PMGSY, Jal Jeevan Mission, AMRUT).
+- **Debarment & Blacklist Hub**: Central CVC / GeM debarred vendor enforcement.
+- **Policy Sandbox Simulation**: Real-time "What-If" modeling (e.g. adjust monsoon delay tolerance, category caps).
+- **Auto-Drafted Audit Brief**: Parliamentary inquiry and CAG audit brief generation in seconds.
+
+#### 5. Citizen Transparency Portal (`/dashboard/citizen`)
+- **Constituency Works Explorer**: Search local development works in any district, verify GPS locations on maps, and inspect approved budgets.
+- **Grievance Filing & Photo Upload**: Submit site complaints and progress photos directly into the NLP triage & vision verification pipeline.
 
 ---
 
-## 8. Testing, Benchmarks & Validation
+### Inbuilt FastAPI Analytics Dashboard (`index.html`)
 
-The codebase includes two automated test suites guaranteeing end-to-end reliability across modules and API endpoints.
+Served directly from `http://127.0.0.1:8000/dashboard`:
+- **Executive Badges**: High-contrast pills (`LOW RISK` in emerald, `MEDIUM RISK` in amber, `HIGH RISK` in rose).
+- **Factor Breakdown Lists**: Full factor titles, plain-English explanations, and weighted contribution scores.
+- **3-Column Verification Panels**: Extracted invoice figures (amount, date, vendor) with confidence indicators and side-by-side sanction diffs.
+- **Developer Inspection Accordion**: Collapsible `<details><summary>View Raw JSON Payload</summary></details>` toggles on every card.
+
+---
+
+## 8. Testing, Benchmarks & End-to-End Validation
+
+The platform includes three automated verification suites guaranteeing 100% test coverage from pure AI heuristics up to full-stack browser routes:
 
 ### 1. Core Model Test Suite (`test_integration.py` — 36 Tests)
 Tests pure logic algorithms against the 12,937-row dataset:
@@ -410,52 +461,123 @@ Tests pure logic algorithms against the 12,937-row dataset:
 - **Ghost Project Detection**: Precision = **0.976**, Recall = **1.000**, F1-Score = **0.988**
 - **Hub Contractor Detection**: Precision = **0.530**, Recall = **0.530**
 - **Vision pHash Validation**: 0-bit Hamming distance on identical photos, $> 15$ bits on non-duplicates.
-- **Haversine Geoverification**: Accurate spherical distance calculations within $0.01\text{ km}$ precision.
-- **TF-IDF Complaint Clustering**: Accurate grouping of overlapping complaints.
-
-### 2. API Integration Test Suite (`test_api.py` — 21 Tests)
-Tests all FastAPI routes using `TestClient`:
-- **HTTP 200 OK** verification across all REST endpoints.
-- **HTTP 422 Unprocessable Entity** verification for `InsufficientDataError` handling.
-- **Data payload schema validation** for all role-based responses.
+- **Haversine Geoverification**: Spherical distance calculations within $0.01\text{ km}$ precision.
+- **TF-IDF Complaint Clustering**: Accurate grouping of overlapping community complaints.
 
 ```bash
-# Execute model integration tests
 python test_integration.py
+```
 
-# Execute API route integration tests
+### 2. API Integration Test Suite (`test_api.py` — 21 Tests)
+Tests all FastAPI REST endpoints using Starlette `TestClient`:
+- HTTP 200 OK across all model scoring, OCR, vision, collusion, and dashboard endpoints.
+- HTTP 422 Unprocessable Entity for `InsufficientDataError` handling.
+- Pydantic schema validation across all responses.
+
+```bash
 python test_api.py
+```
+
+### 3. Full-Stack E2E Automated Verification (`verify_e2e.py`)
+Validates the entire live running system across all three tiers:
+- **All 20+ Dashboard Routes & Query Tabs**: District, MP, State, Ministry, Citizen, and Login.
+- **Role-Based Authentication**: Issues JWT tokens for District, MP, and Ministry roles and verifies scoped access.
+- **Live ML Grounded Seam**: Verifies cross-tier natural language question answering via the FastAPI RAG engine.
+
+```bash
+python verify_e2e.py
 ```
 
 ---
 
 ## 9. Installation, Setup & Local Operations
 
-### Prerequisites
-- Python 3.9 or higher
-- Tesseract OCR (optional, for real image OCR parsing):
-  - **Windows**: Download installer from UB-Mannheim Tesseract wiki.
+### Multi-Tier Architecture Overview
+
+| Service | Technology | Port | Access URL | Description |
+|---|---|---|---|---|
+| **Web Frontend** | Next.js 14 / React 18 / Tailwind | `3000` | [http://localhost:3000](http://localhost:3000) | Multi-role administrative dashboards & citizen portal |
+| **Backend API** | Node.js / Express / Prisma | `5000` | [http://localhost:5000](http://localhost:5000) | JWT authentication, SLA queue, alert state machine |
+| **ML Intelligence Engine** | Python / FastAPI / Uvicorn | `8000` | [http://127.0.0.1:8000](http://127.0.0.1:8000) | 6 AI modules, FAISS RAG, OCR, pHash vision |
+
+---
+
+### Prerequisites & Environment Setup
+
+- **Python 3.9+** (Tested on Python 3.12)
+- **Node.js v18+** (Tested on Node.js v20/v24)
+- **npm** or **pnpm**
+- **Tesseract OCR** (optional, for physical invoice OCR parsing):
+  - **Windows**: [UB-Mannheim Tesseract installer](https://github.com/UB-Mannheim/tesseract/wiki)
   - **Linux (Ubuntu/Debian)**: `sudo apt-get install tesseract-ocr`
   - **macOS**: `brew install tesseract`
 
-### Step 1: Install Dependencies
+#### Environment Configuration Files
+1. Root `.env`:
+   ```env
+   GEMINI_API_KEY=your_gemini_api_key_here
+   ```
+2. Server `server/.env`:
+   ```env
+   PORT=5000
+   JWT_SECRET="mplads-super-secure-jwt-secret-key-2026-gov"
+   USE_MOCK_ML="false"
+   ML_SERVICE_URL="http://127.0.0.1:8000"
+   # Optional cloud services (gracefully falls back to local in-memory queues if omitted):
+   DATABASE_URL="postgresql://user:pass@host/db?sslmode=require"
+   REDIS_URL="rediss://default:token@host:6379"
+   ```
+
+---
+
+### Launching the Full Stack
+
+Run the three services in separate terminal windows:
+
+#### Terminal 1: Python FastAPI ML Service (Port 8000)
 ```bash
+# Install Python dependencies
 pip install -r mplads_ai/requirements.txt
+
+# Start Uvicorn API server
+python -m uvicorn mplads_ai.api.app:app --host 127.0.0.1 --port 8000 --reload
 ```
 
-### Step 2: Verify Tests
+#### Terminal 2: Node.js / Express Backend (Port 5000)
 ```bash
-python test_api.py
-python test_integration.py
+cd server
+npm install
+npm run dev
 ```
 
-### Step 3: Launch the Uvicorn API Server
+#### Terminal 3: Next.js Web Frontend (Port 3000)
 ```bash
-uvicorn mplads_ai.api.app:app --host 127.0.0.1 --port 8000 --reload
+cd web
+npm install
+npm run dev
 ```
 
-### Step 4: Access Interfaces
-- **Interactive Web Dashboard**: [http://127.0.0.1:8000/dashboard](http://127.0.0.1:8000/dashboard)
-- **Interactive Swagger OpenAPI Documentation**: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
-- **ReDoc API Reference Specification**: [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
-- **API Health Check**: [http://127.0.0.1:8000/api/health](http://127.0.0.1:8000/api/health)
+---
+
+### Pre-Configured Demo Login Credentials
+
+The platform includes pre-seeded administrative personas for immediate demonstration:
+
+| Administrative Role | Email Address | Password | Scoped Constituency / District |
+|---|---|---|---|
+| **District Authority (Collector)** | `district@mplads.gov.in` | `admin` | Pune / Wayanad District |
+| **Member of Parliament (MP)** | `mp@mplads.gov.in` | `admin` | Hingoli / Rae Bareli Constituency |
+| **Union Ministry (MoSPI)** | `ministry@mplads.gov.in` | `admin` | National Directorate (All 543 Seats) |
+| **State Nodal Officer** | `state@mplads.gov.in` | `admin` | State Level Overview |
+| **Citizen Explorer** | *No login required* | — | Public Access (`/dashboard/citizen`) |
+
+---
+
+### Key Access Points & Documentation Links
+
+- **Main Web Application & Login**: [http://localhost:3000/login](http://localhost:3000/login)
+- **FastAPI Interactive Swagger UI**: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+- **FastAPI ReDoc Reference**: [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
+- **Inbuilt Model Analytics Dashboard**: [http://127.0.0.1:8000/dashboard](http://127.0.0.1:8000/dashboard)
+- **GitHub Repository**: [https://github.com/nihal00753/MPLADS_SIH](https://github.com/nihal00753/MPLADS_SIH)
+
