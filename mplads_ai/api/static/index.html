@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MPLADS AI/ML Intelligence Platform — Live Operations & Monitoring</title>
+  <meta name="description" content="AI/ML Intelligence platform for MPLADS fund monitoring, risk scoring, collusion detection, and fraud prevention." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-primary: #0a0f1d;
+      --bg-secondary: #111827;
+      --bg-card: rgba(17, 24, 39, 0.75);
+      --bg-card-hover: rgba(31, 41, 55, 0.85);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(99, 102, 241, 0.3);
+      --text-primary: #f9fafb;
+      --text-secondary: #9ca3af;
+      --text-muted: #6b7280;
+      --accent-primary: #6366f1;
+      --accent-glow: rgba(99, 102, 241, 0.25);
+      --accent-cyan: #06b6d4;
+      --accent-emerald: #10b981;
+      --accent-amber: #f59e0b;
+      --accent-rose: #f43f5e;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      --glass-blur: blur(12px);
+      --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: radial-gradient(circle at top right, #1e1b4b 0%, #0a0f1d 50%, #030712 100%);
+      color: var(--text-primary);
+      min-height: 100vh;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .brand-title {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    /* Top Navigation Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 15, 29, 0.85);
+      backdrop-filter: var(--glass-blur);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .brand-badge {
+      background: linear-gradient(135deg, #6366f1, #06b6d4);
+      padding: 0.4rem 0.65rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: white;
+      box-shadow: 0 0 15px var(--accent-glow);
+    }
+
+    .brand-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      background: linear-gradient(to right, #ffffff, #93c5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .brand-subtitle {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .api-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: rgba(16, 185, 129, 0.12);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 8px #10b981;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .docs-btn {
+      padding: 0.45rem 1rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text-primary);
+      text-decoration: none;
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .docs-btn:hover {
+      background: var(--accent-primary);
+      border-color: var(--accent-primary);
+      box-shadow: 0 0 15px var(--accent-glow);
+    }
+
+    /* Main Container */
+    main {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* Hero Banner */
+    .hero {
+      background: linear-gradient(135deg, rgba(30, 27, 75, 0.6), rgba(15, 23, 42, 0.8));
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-glass);
+      backdrop-filter: var(--glass-blur);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-title {
+      font-size: 1.85rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-desc {
+      color: var(--text-secondary);
+      max-width: 800px;
+      font-size: 0.95rem;
+    }
+
+    /* Metrics Grid */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .metric-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.35rem;
+      backdrop-filter: var(--glass-blur);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .metric-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--border-accent);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+    }
+
+    .metric-label {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .metric-value {
+      font-size: 1.95rem;
+      font-weight: 800;
+      font-family: 'Outfit', sans-serif;
+      margin: 0.35rem 0;
+    }
+
+    .metric-sub {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* Tabs Bar */
+    .tabs-nav {
+      display: flex;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.75rem;
+      overflow-x: auto;
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      padding: 0.65rem 1.25rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .tab-btn:hover {
+      color: var(--text-primary);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .tab-btn.active {
+      color: white;
+      background: var(--accent-primary);
+      box-shadow: 0 0 15px var(--accent-glow);
+    }
+
+    /* Role Switcher Pill Bar */
+    .role-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(17, 24, 39, 0.9);
+      padding: 0.4rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      margin-bottom: 1.5rem;
+      width: fit-content;
+    }
+
+    .role-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      padding: 0.45rem 1rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .role-btn.active {
+      background: rgba(255, 255, 255, 0.12);
+      color: white;
+    }
+
+    /* Content Cards & Sections */
+    .content-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      margin-bottom: 1.75rem;
+      backdrop-filter: var(--glass-blur);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    /* Interactive Form Grids */
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    input, select, textarea {
+      background: rgba(10, 15, 29, 0.8);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      padding: 0.65rem 0.85rem;
+      font-size: 0.88rem;
+      font-family: inherit;
+      outline: none;
+      transition: var(--transition);
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--accent-primary);
+      box-shadow: 0 0 0 2px var(--accent-glow);
+    }
+
+    button.btn-primary {
+      background: linear-gradient(135deg, #6366f1, #4f46e5);
+      border: none;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      box-shadow: 0 4px 14px 0 var(--accent-glow);
+    }
+
+    button.btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px 0 rgba(99, 102, 241, 0.4);
+    }
+
+    /* Output Display Box */
+    .output-box {
+      background: #060913;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      margin-top: 1rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.88rem;
+      max-height: 520px;
+      overflow-y: auto;
+      color: #e2e8f0;
+    }
+
+    /* Result Panel Styles for Normal Text Display */
+    .result-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .result-header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      padding-bottom: 0.85rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .result-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 0.85rem;
+      margin-top: 0.75rem;
+    }
+
+    .result-stat-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 0.85rem 1rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .result-callout {
+      padding: 0.85rem 1.15rem;
+      border-radius: var(--radius-sm);
+      margin: 0.75rem 0;
+      font-size: 0.86rem;
+      line-height: 1.5;
+    }
+
+    .result-callout.danger {
+      background: rgba(244, 63, 94, 0.1);
+      border-left: 3px solid #f43f5e;
+      color: #fecdd3;
+    }
+
+    .result-callout.warning {
+      background: rgba(245, 158, 11, 0.1);
+      border-left: 3px solid #f59e0b;
+      color: #fde68a;
+    }
+
+    .result-callout.success {
+      background: rgba(16, 185, 129, 0.1);
+      border-left: 3px solid #10b981;
+      color: #a7f3d0;
+    }
+
+    .result-callout.info {
+      background: rgba(99, 102, 241, 0.1);
+      border-left: 3px solid #6366f1;
+      color: #c7d2fe;
+    }
+
+    .json-pre {
+      background: #030712;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      font-family: monospace;
+      font-size: 0.76rem;
+      max-height: 220px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      color: #94a3b8;
+      margin-top: 0.5rem;
+    }
+
+    /* Badge Tags */
+    .badge {
+      display: inline-flex;
+      padding: 0.22rem 0.65rem;
+      border-radius: 9999px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+
+    .badge-high { background: rgba(244, 63, 94, 0.15); color: #fb7185; border: 1px solid rgba(244, 63, 94, 0.3); }
+    .badge-med { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+    .badge-low { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+
+    /* Tables */
+    .table-container {
+      overflow-x: auto;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.85rem;
+    }
+
+    th {
+      background: rgba(31, 41, 55, 0.6);
+      padding: 0.85rem 1rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* Loading Spinner */
+    .spinner {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header { padding: 1rem; flex-direction: column; gap: 1rem; }
+      main { padding: 1rem; }
+      .metrics-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="brand-badge">MPLADS AI</div>
+      <div>
+        <div class="brand-title">Intelligence & Risk Operations Platform</div>
+        <div class="brand-subtitle">FastAPI Core • 6 AI/ML Modules • 12,937 Active Works</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <div class="api-badge">
+        <span class="status-dot"></span>
+        API Online (v1.0.0)
+      </div>
+      <a href="/docs" target="_blank" class="docs-btn">Interactive OpenAPI Docs ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Platform Overview -->
+    <section class="hero">
+      <h1 class="hero-title">Unified Anti-Fraud & Fund Monitoring Engine</h1>
+      <p class="hero-desc">
+        Real-time risk scoring, vision tamper verification, document OCR mismatch detection, citizen grievance NLP triage, and collusion network clustering across all Parliamentary constituencies.
+      </p>
+    </section>
+
+    <!-- Top KPI Metrics -->
+    <section class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-label">Total Works Monitored</div>
+        <div class="metric-value" id="kpi-works">12,937</div>
+        <div class="metric-sub">Across 543 Lok Sabha Constituencies</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Sanctioned Value</div>
+        <div class="metric-value" id="kpi-amount">₹2,842.15 Cr</div>
+        <div class="metric-sub">Central MPLADS Allocation Ceiling</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Flagged Anomalies</div>
+        <div class="metric-value" id="kpi-anomalies" style="color: #fb7185;">2,148</div>
+        <div class="metric-sub">Cost overruns, ghost works, split bills</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">High-Risk Hub Contractors</div>
+        <div class="metric-value" id="kpi-hubs" style="color: #fbbf24;">36</div>
+        <div class="metric-sub">Co-occurrence clusters detected</div>
+      </div>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <div class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('dashboards')">Role Dashboards</button>
+      <button class="tab-btn" onclick="switchTab('scoring')">1. Pre-Sanction Scoring</button>
+      <button class="tab-btn" onclick="switchTab('ocr')">2. Document OCR</button>
+      <button class="tab-btn" onclick="switchTab('nlp')">3. Complaint NLP</button>
+      <button class="tab-btn" onclick="switchTab('network')">4. Collusion Network</button>
+      <button class="tab-btn" onclick="switchTab('vision')">5. Vision Analysis</button>
+      <button class="tab-btn" onclick="switchTab('query')">6. NL Query Assistant</button>
+    </div>
+
+    <!-- TAB 1: ROLE DASHBOARDS -->
+    <section id="tab-dashboards" class="tab-content">
+      <div class="role-bar">
+        <button class="role-btn active" onclick="loadRole('ministry', this)">Ministry (MoSPI)</button>
+        <button class="role-btn" onclick="loadRole('state', this)">State Nodal Officer</button>
+        <button class="role-btn" onclick="loadRole('district', this)">District Authority</button>
+        <button class="role-btn" onclick="loadRole('mp', this)">Member of Parliament</button>
+      </div>
+
+      <div class="content-card">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title" id="role-title">Union Ministry (MoSPI) National Dashboard</h2>
+            <div class="card-desc" id="role-desc">Aggregate oversight across all states, anomaly patterns, and fund-dumping alarms.</div>
+          </div>
+          <span class="badge badge-high" id="role-badge">National Level</span>
+        </div>
+        <div id="role-content">
+          <div class="spinner"></div> Loading role telemetry...
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: PRE-SANCTION SCORING -->
+    <section id="tab-scoring" class="tab-content" style="display: none;">
+      <div class="content-card">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Module 1 — Predictive Pre-Sanction Scoring</h2>
+            <div class="card-desc">Evaluates proposal risk on 6 factors before administrative approval is granted.</div>
+          </div>
+        </div>
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Proposed Amount (₹)</label>
+            <input type="number" id="sc-amount" value="3500000" />
+          </div>
+          <div class="form-group">
+            <label>Work Category</label>
+            <select id="sc-category">
+              <option value="Drinking Water Facility">Drinking Water Facility</option>
+              <option value="Roads, Pathways and Bridges" selected>Roads, Pathways and Bridges</option>
+              <option value="Education">Education</option>
+              <option value="Public Health">Public Health</option>
+              <option value="Community Hall">Community Hall</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Region / State</label>
+            <input type="text" id="sc-region" value="Bihar" />
+          </div>
+          <div class="form-group">
+            <label>Season Month (1-12)</label>
+            <input type="number" id="sc-month" min="1" max="12" value="7" />
+          </div>
+          <div class="form-group">
+            <label>Vendor ID (Optional)</label>
+            <input type="text" id="sc-vendor" value="V00010" />
+          </div>
+          <div class="form-group">
+            <label>Category Benchmark Median (₹)</label>
+            <input type="number" id="sc-bench" value="2000000" />
+          </div>
+        </div>
+        <button class="btn-primary" onclick="runScoring()">Run Pre-Sanction Evaluation</button>
+        <div class="output-box" id="sc-output">Ready to score proposal. Click the button above.</div>
+      </div>
+    </section>
+
+    <!-- TAB 3: DOCUMENT OCR -->
+    <section id="tab-ocr" class="tab-content" style="display: none;">
+      <div class="content-card">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Module 2 — Document OCR & Sanction Diff</h2>
+            <div class="card-desc">Parses amount, date, and vendor from invoice text, flagging discrepancies against sanctioned figures.</div>
+          </div>
+        </div>
+        <div class="form-grid">
+          <div class="form-group" style="grid-column: 1 / -1;">
+            <label>Raw Invoice / Certificate Text</label>
+            <textarea id="ocr-text" rows="4">TAX INVOICE
+Invoice No: INV-2026-908
+Date: 2026/06/27
+Billed To: District Rural Development Authority (DRDA)
+Vendor: M/s Maa Construction Pvt Ltd
+Description: Construction of concrete road, Package 3
+Grand Total: Rs. 14,56,789.06</textarea>
+          </div>
+          <div class="form-group">
+            <label>Approved Sanction Amount (₹)</label>
+            <input type="number" id="ocr-sanction-amt" value="1000000" />
+          </div>
+          <div class="form-group">
+            <label>Approved Vendor Name</label>
+            <input type="text" id="ocr-sanction-vendor" value="Maa Construction" />
+          </div>
+        </div>
+        <button class="btn-primary" onclick="runOcr()">Parse & Compare With Sanction</button>
+        <div class="output-box" id="ocr-output">Paste or edit invoice text above and click Run.</div>
+      </div>
+    </section>
+
+    <!-- TAB 4: COMPLAINT NLP -->
+    <section id="tab-nlp" class="tab-content" style="display: none;">
+      <div class="content-card">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Module 3 — Citizen Grievance NLP Triage</h2>
+            <div class="card-desc">Classifies complaint urgency, flags immediate public safety hazards, and categorizes civic issues.</div>
+          </div>
+        </div>
+        <div class="form-group" style="margin-bottom: 1.25rem;">
+          <label>Citizen Complaint Description</label>
+          <textarea id="nlp-text" rows="3">The newly constructed culvert on the main school road has completely collapsed after 3 weeks of rain. School buses cannot pass and children are in grave danger of falling into the deep ditch.</textarea>
+        </div>
+        <button class="btn-primary" onclick="runNlp()">Triage Grievance</button>
+        <div class="output-box" id="nlp-output">Ready to triage complaint.</div>
+      </div>
+    </section>
+
+    <!-- TAB 5: COLLUSION NETWORK -->
+    <section id="tab-network" class="tab-content" style="display: none;">
+      <div class="content-card">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Module 4 — Collusion Network & Entity Resolution</h2>
+            <div class="card-desc">Uncovers hidden contractor concentration and shared-official co-occurrence clusters.</div>
+          </div>
+          <button class="btn-primary" onclick="loadCollusionClusters()">Run Graph Cluster Detection</button>
+        </div>
+        <div id="network-output" class="output-box">Click "Run Graph Cluster Detection" to analyze project assignments across vendors and officials.</div>
+      </div>
+    </section>
+
+    <!-- TAB 6: VISION ANALYSIS -->
+    <section id="tab-vision" class="tab-content" style="display: none;">
+      <div class="content-card">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Module 5 — Progress Photo Duplicate & Geotag Verification</h2>
+            <div class="card-desc">Detects recycled progress photos via perceptual hashing (pHash) and checks GPS against project site.</div>
+          </div>
+        </div>
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Image Fingerprint A (pHash)</label>
+            <input type="text" id="vis-hash-a" value="817a7e2a7e2a7e80" />
+          </div>
+          <div class="form-group">
+            <label>Image Fingerprint B (pHash)</label>
+            <input type="text" id="vis-hash-b" value="817a7e2a7e2a7e80" />
+          </div>
+          <div class="form-group">
+            <label>Claimed Project Latitude</label>
+            <input type="number" step="0.0001" id="vis-lat" value="28.6139" />
+          </div>
+          <div class="form-group">
+            <label>Claimed Project Longitude</label>
+            <input type="number" step="0.0001" id="vis-lon" value="77.2090" />
+          </div>
+        </div>
+        <button class="btn-primary" onclick="runVisionCheck()">Run Vision & Geotag Verification</button>
+        <div class="output-box" id="vision-output">Ready to test duplicate detection and geoverification.</div>
+      </div>
+    </section>
+
+    <!-- TAB 7: NL QUERY -->
+    <section id="tab-query" class="tab-content" style="display: none;">
+      <div class="content-card">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Module 6 — Natural Language Data Grounded Assistant</h2>
+            <div class="card-desc">Ask questions in natural language grounded directly in official MPLADS data records.</div>
+          </div>
+        </div>
+        <div class="form-group" style="margin-bottom: 1.25rem;">
+          <label>Ask a Question</label>
+          <input type="text" id="nl-question" value="How many total works and anomalies are recorded in the system?" />
+        </div>
+        <button class="btn-primary" onclick="runNlQuery()">Ask AI Assistant</button>
+        <div class="output-box" id="query-output">Ready to process natural language questions.</div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const API_BASE = window.location.origin;
+
+    // Tab Switching
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      const activeContent = document.getElementById('tab-' + tabId);
+      if (activeContent) activeContent.style.display = 'block';
+      event.target.classList.add('active');
+    }
+
+    // Initialize Dashboard overview
+    async function initDashboard() {
+      try {
+        const res = await fetch(`${API_BASE}/api/dashboard/overview`);
+        const data = await res.json();
+        document.getElementById('kpi-works').innerText = Number(data.total_works).toLocaleString();
+        document.getElementById('kpi-amount').innerText = `₹${data.total_sanctioned_cr} Cr`;
+        document.getElementById('kpi-anomalies').innerText = Number(data.total_anomalies).toLocaleString();
+        document.getElementById('kpi-hubs').innerText = data.hub_contractors_count;
+        loadRole('ministry');
+      } catch (err) {
+        console.error('Error fetching overview', err);
+      }
+    }
+
+    // Role switcher
+    async function loadRole(role, btnEl) {
+      if (btnEl) {
+        document.querySelectorAll('.role-btn').forEach(b => b.classList.remove('active'));
+        btnEl.classList.add('active');
+      }
+      const container = document.getElementById('role-content');
+      container.innerHTML = '<div class="spinner"></div> Fetching real-time role analytics...';
+
+      let endpoint = `${API_BASE}/api/dashboard/${role}`;
+      if (role === 'mp') endpoint += '/Rahul Gandhi';
+      if (role === 'district') endpoint += '/Wayanad';
+      if (role === 'state') endpoint += '/Uttar Pradesh';
+
+      try {
+        const res = await fetch(endpoint);
+        const data = await res.json();
+        renderRoleData(role, data);
+      } catch (err) {
+        container.innerHTML = `<div style="color: #fb7185;">Error loading role data: ${err.message}</div>`;
+      }
+    }
+
+    function renderRoleData(role, data) {
+      const container = document.getElementById('role-content');
+      if (role === 'ministry') {
+        document.getElementById('role-title').innerText = 'Union Ministry (MoSPI) National Dashboard';
+        document.getElementById('role-desc').innerText = 'National fraud distribution and top-risk states across India.';
+        container.innerHTML = `
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1rem;">
+            <div>
+              <h4 style="margin-bottom: 0.5rem;">Detected Anomaly Breakdown:</h4>
+              <ul style="list-style: none; padding: 0;">
+                ${Object.entries(data.anomaly_type_breakdown).map(([k, v]) => `
+                  <li style="padding: 0.4rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between;">
+                    <span style="color: #cbd5e1;">${k}</span>
+                    <span class="badge badge-high">${v}</span>
+                  </li>
+                `).join('')}
+              </ul>
+            </div>
+            <div>
+              <h4 style="margin-bottom: 0.5rem;">Top Risk States:</h4>
+              <div class="table-container">
+                <table>
+                  <tr><th>State</th><th>Works</th><th>Anomalies</th><th>Rate</th></tr>
+                  ${data.top_risk_states.slice(0, 5).map(s => `
+                    <tr><td>${s.state}</td><td>${s.total_works}</td><td style="color:#fb7185;">${s.anomalies}</td><td>${s.rate_pct}%</td></tr>
+                  `).join('')}
+                </table>
+              </div>
+            </div>
+          </div>
+        `;
+      } else if (role === 'state') {
+        document.getElementById('role-title').innerText = `State Nodal Dashboard: ${data.state_name}`;
+        document.getElementById('role-desc').innerText = `${data.total_districts} districts monitored. Overall anomaly rate: ${data.anomaly_rate_pct}%`;
+        container.innerHTML = `
+          <h4 style="margin-bottom: 0.5rem;">High-Risk Districts in ${data.state_name}:</h4>
+          <div class="table-container">
+            <table>
+              <tr><th>District</th><th>Total Works</th><th>Anomalies Flagged</th><th>Risk Rate</th></tr>
+              ${data.top_districts_by_risk.map(d => `
+                <tr><td>${d.district}</td><td>${d.total_works}</td><td style="color:#fb7185;">${d.anomalies}</td><td><span class="badge badge-med">${d.rate_pct}%</span></td></tr>
+              `).join('')}
+            </table>
+          </div>
+        `;
+      } else if (role === 'district') {
+        document.getElementById('role-title').innerText = `District Authority Dashboard: ${data.district_name} (${data.state})`;
+        document.getElementById('role-desc').innerText = `${data.contractors_active} active contractors. ${data.anomalous_works_count} flagged works.`;
+        container.innerHTML = `
+          <h4 style="margin-bottom: 0.5rem;">Flagged Works Requiring District Scrutiny:</h4>
+          <div class="table-container">
+            <table>
+              <tr><th>Work Number</th><th>Work Category</th><th>Amount</th><th>Status</th><th>Anomaly Type</th></tr>
+              ${data.flagged_works.slice(0, 5).map(w => `
+                <tr>
+                  <td><code>${w.unique_work_number}</code></td>
+                  <td>${w.work_category}</td>
+                  <td>₹${Number(w.sanction_amount).toLocaleString()}</td>
+                  <td><span class="badge badge-med">${w.work_status}</span></td>
+                  <td><span class="badge badge-high">${w.anomaly_type}</span></td>
+                </tr>
+              `).join('')}
+            </table>
+          </div>
+        `;
+      } else if (role === 'mp') {
+        document.getElementById('role-title').innerText = `Member of Parliament: ${data.mp_name}`;
+        document.getElementById('role-desc').innerText = `Constituency: ${data.constituency}, ${data.state} • Limit: ₹${data.allocated_limit_cr} Cr • Sanctioned: ₹${data.total_sanctioned_cr} Cr`;
+        container.innerHTML = `
+          <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+            <div class="badge badge-low">Completed: ${data.completed_works}</div>
+            <div class="badge badge-med">Stalled: ${data.stalled_works}</div>
+            <div class="badge badge-high">Anomalies: ${data.anomaly_works_count}</div>
+          </div>
+          <h4 style="margin-bottom: 0.5rem;">Constituency Works Requiring Attention:</h4>
+          <div class="table-container">
+            <table>
+              <tr><th>Work Name</th><th>Category</th><th>Amount</th><th>Status</th></tr>
+              ${data.top_anomalous_works.slice(0, 5).map(w => `
+                <tr><td>${w.work_name}</td><td>${w.work_category}</td><td>₹${Number(w.sanction_amount).toLocaleString()}</td><td><span class="badge badge-high">${w.work_status}</span></td></tr>
+              `).join('')}
+            </table>
+          </div>
+        `;
+      }
+    }
+
+    // Currency and formatting helper
+    function formatCurrency(val) {
+      const num = parseFloat(val);
+      if (isNaN(num)) return val || '—';
+      return '₹' + num.toLocaleString('en-IN', { maximumFractionDigits: 2 });
+    }
+
+    // 1. Scoring execution & Normal Text Renderer
+    function renderScoringResult(data) {
+      const badgeClass = data.risk_level === 'HIGH' ? 'badge-high' : (data.risk_level === 'MEDIUM' ? 'badge-med' : 'badge-low');
+      const scorePct = (data.overall_score * 100).toFixed(1);
+
+      const factorLabels = {
+        'vendor_delay_history': 'Vendor Historical Delay Rate',
+        'vendor_anomaly_history': 'Vendor Anomaly Track Record',
+        'cost_benchmark_outlier': 'Cost Benchmark & Outlier Deviation',
+        'seasonal_monsoon_delay': 'Seasonal Monsoon Disruption Risk',
+        'category_failure_rate': 'Historical Category Failure Rate',
+        'work_splitting_indicator': 'Sub-Threshold Work Splitting Indicator'
+      };
+
+      const recBadge = data.recommendation === 'APPROVED' ? 'badge-low' : (data.recommendation === 'REJECT' ? 'badge-high' : 'badge-med');
+
+      return `
+        <div class="result-card">
+          <div class="result-header-bar">
+            <div>
+              <div style="font-size: 0.78rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em;">Proposal Pre-Sanction Risk Assessment</div>
+              <div style="font-size: 1.35rem; font-weight: 800; font-family: 'Outfit', sans-serif; margin-top: 0.2rem; color: #fff;">
+                Total Evaluated Risk: ${scorePct}% <span style="font-size: 0.88rem; font-weight: 500; color: #94a3b8;">(${data.overall_score.toFixed(4)})</span>
+              </div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+              <span class="badge ${badgeClass}" style="font-size: 0.82rem; padding: 0.35rem 0.85rem;">${data.risk_level} RISK</span>
+              <span class="badge ${recBadge}" style="font-size: 0.82rem; padding: 0.35rem 0.85rem;">${data.recommendation.replace(/_/g, ' ')}</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 0.75rem;">
+            <h4 style="font-size: 0.95rem; margin-bottom: 0.65rem; color: #f1f5f9; display: flex; justify-content: space-between; align-items: center;">
+              <span>Detected Anomaly Factor Breakdown:</span>
+              <span style="font-size: 0.76rem; color: #94a3b8; font-weight: normal;">Weight & Risk Contribution</span>
+            </h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              ${(data.factors || []).map(f => {
+                const label = factorLabels[f.factor_name] || f.factor_name.replace(/_/g, ' ');
+                const contribPct = (f.contribution * 100).toFixed(2);
+                const weightPct = (f.weight * 100).toFixed(0);
+                const factorBadgeClass = f.contribution > 0.05 ? 'badge-high' : (f.contribution > 0.02 ? 'badge-med' : 'badge-low');
+                return `
+                  <li style="padding: 0.65rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+                    <div style="flex: 1;">
+                      <div style="color: #f1f5f9; font-weight: 600; font-size: 0.88rem;">${label}</div>
+                      <div style="color: #94a3b8; font-size: 0.8rem; margin-top: 0.2rem; line-height: 1.4;">${f.reason}</div>
+                    </div>
+                    <div style="text-align: right; white-space: nowrap;">
+                      <span class="badge ${factorBadgeClass}">+${contribPct}%</span>
+                      <div style="font-size: 0.72rem; color: #64748b; margin-top: 0.25rem;">Weight: ${weightPct}%</div>
+                    </div>
+                  </li>
+                `;
+              }).join('')}
+            </ul>
+          </div>
+
+          ${data.risk_signals && data.risk_signals.length > 0 ? `
+            <div style="margin-top: 1rem;">
+              <h4 style="font-size: 0.9rem; margin-bottom: 0.5rem; color: #fb7185;">Flagged Risk Signals:</h4>
+              ${data.risk_signals.map(s => `
+                <div class="result-callout danger">
+                  <strong>[${s.signal_type}]</strong>: ${s.reason}
+                </div>
+              `).join('')}
+            </div>
+          ` : ''}
+
+          <details style="margin-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.75rem;">
+            <summary style="cursor: pointer; color: #64748b; font-size: 0.78rem;">View Raw JSON Payload</summary>
+            <pre class="json-pre">${JSON.stringify(data, null, 2)}</pre>
+          </details>
+        </div>
+      `;
+    }
+
+    async function runScoring() {
+      const out = document.getElementById('sc-output');
+      out.innerHTML = '<div style="display: flex; align-items: center; gap: 0.5rem;"><div class="spinner"></div> Calculating 6-factor risk score...</div>';
+      const payload = {
+        sanction_amount: parseFloat(document.getElementById('sc-amount').value),
+        category: document.getElementById('sc-category').value,
+        region: document.getElementById('sc-region').value,
+        season_month: parseInt(document.getElementById('sc-month').value),
+        vendor_id: document.getElementById('sc-vendor').value,
+        category_benchmark_amount: parseFloat(document.getElementById('sc-bench').value)
+      };
+
+      try {
+        const res = await fetch(`${API_BASE}/api/scoring/score`, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          out.innerHTML = `<div class="result-callout danger"><strong>Error (${res.status}):</strong> ${data.detail || 'Scoring calculation failed'}</div>`;
+          return;
+        }
+        out.innerHTML = renderScoringResult(data);
+      } catch (err) {
+        out.innerHTML = `<div class="result-callout danger"><strong>Error:</strong> ${err.message}</div>`;
+      }
+    }
+
+    // 2. OCR execution & Normal Text Renderer
+    function renderOcrResult(data) {
+      const hasDiscrepancy = (data.diffs || []).some(d => d.discrepancy);
+      const statusBadge = hasDiscrepancy 
+        ? '<span class="badge badge-high" style="font-size:0.82rem; padding: 0.35rem 0.85rem;">DISCREPANCY DETECTED</span>' 
+        : '<span class="badge badge-low" style="font-size:0.82rem; padding: 0.35rem 0.85rem;">SANCTION MATCHED</span>';
+
+      return `
+        <div class="result-card">
+          <div class="result-header-bar">
+            <div>
+              <div style="font-size: 0.78rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em;">Invoice Verification Summary</div>
+              <div style="font-size: 1.35rem; font-weight: 800; font-family: 'Outfit', sans-serif; margin-top: 0.2rem; color: #fff;">
+                ${hasDiscrepancy ? 'Critical Discrepancies Flagged Against Sanction' : 'Invoice Conforms With Sanction Approval'}
+              </div>
+            </div>
+            <div>${statusBadge}</div>
+          </div>
+
+          <div class="result-stats-grid">
+            <div class="result-stat-box">
+              <div style="font-size: 0.72rem; color: #94a3b8; text-transform: uppercase; font-weight: 600;">Extracted Total Amount</div>
+              <div style="font-size: 1.25rem; font-weight: 700; color: #fff; margin: 0.25rem 0;">${data.amount && data.amount.value ? formatCurrency(data.amount.value) : 'Not detected'}</div>
+              <div style="font-size: 0.72rem; color: #34d399;">Confidence: ${((data.amount ? data.amount.confidence : 0) * 100).toFixed(0)}%</div>
+            </div>
+            <div class="result-stat-box">
+              <div style="font-size: 0.72rem; color: #94a3b8; text-transform: uppercase; font-weight: 600;">Invoice Bill Date</div>
+              <div style="font-size: 1.25rem; font-weight: 700; color: #fff; margin: 0.25rem 0;">${data.date && data.date.value ? data.date.value : 'Not detected'}</div>
+              <div style="font-size: 0.72rem; color: #34d399;">Confidence: ${((data.date ? data.date.confidence : 0) * 100).toFixed(0)}%</div>
+            </div>
+            <div class="result-stat-box">
+              <div style="font-size: 0.72rem; color: #94a3b8; text-transform: uppercase; font-weight: 600;">Extracted Vendor Name</div>
+              <div style="font-size: 1rem; font-weight: 700; color: #fff; margin: 0.25rem 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${data.vendor_name && data.vendor_name.value ? data.vendor_name.value : 'Not detected'}</div>
+              <div style="font-size: 0.72rem; color: #34d399;">Confidence: ${((data.vendor_name ? data.vendor_name.confidence : 0) * 100).toFixed(0)}%</div>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.25rem;">
+            <h4 style="font-size: 0.95rem; margin-bottom: 0.65rem; color: #f1f5f9;">Sanction Discrepancy Breakdown:</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              ${(data.diffs || []).map(d => {
+                const fieldTitle = d.field_name === 'amount' 
+                  ? 'Invoice Amount vs Approved Sanction' 
+                  : (d.field_name === 'vendor_name' ? 'Vendor Legal Identity Matching' : (d.field_name === 'date' ? 'Invoice Date Validity' : d.field_name));
+                const badge = d.discrepancy 
+                  ? '<span class="badge badge-high">MISMATCH</span>' 
+                  : '<span class="badge badge-low">MATCHED</span>';
+                return `
+                  <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+                    <div style="flex: 1;">
+                      <div style="color: #f1f5f9; font-weight: 600; font-size: 0.88rem;">${fieldTitle}</div>
+                      <div style="color: #94a3b8; font-size: 0.82rem; margin-top: 0.25rem; line-height: 1.4;">
+                        ${d.reason}
+                      </div>
+                      <div style="margin-top: 0.35rem; font-size: 0.78rem; color: #cbd5e1; display: flex; gap: 1.5rem;">
+                        <span>Extracted: <strong style="color: #fff;">${d.field_name === 'amount' ? formatCurrency(d.extracted_value) : d.extracted_value}</strong></span>
+                        <span>Approved: <strong style="color: #fff;">${d.field_name === 'amount' ? formatCurrency(d.sanctioned_value) : d.sanctioned_value}</strong></span>
+                      </div>
+                    </div>
+                    <div>${badge}</div>
+                  </li>
+                `;
+              }).join('')}
+            </ul>
+          </div>
+
+          ${data.risk_signals && data.risk_signals.length > 0 ? `
+            <div style="margin-top: 1rem;">
+              <h4 style="font-size: 0.9rem; margin-bottom: 0.5rem; color: #fb7185;">Auditor Risk Signals:</h4>
+              ${data.risk_signals.map(s => `
+                <div class="result-callout danger">
+                  <strong>[${s.signal_type}]</strong>: ${s.reason}
+                </div>
+              `).join('')}
+            </div>
+          ` : ''}
+
+          <details style="margin-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.75rem;">
+            <summary style="cursor: pointer; color: #64748b; font-size: 0.78rem;">View Raw JSON Payload</summary>
+            <pre class="json-pre">${JSON.stringify(data, null, 2)}</pre>
+          </details>
+        </div>
+      `;
+    }
+
+    async function runOcr() {
+      const out = document.getElementById('ocr-output');
+      out.innerHTML = '<div style="display: flex; align-items: center; gap: 0.5rem;"><div class="spinner"></div> Extracting invoice fields and computing diff against sanction...</div>';
+      const payload = {
+        raw_text: document.getElementById('ocr-text').value,
+        sanctioned_amount: parseFloat(document.getElementById('ocr-sanction-amt').value),
+        sanctioned_vendor: document.getElementById('ocr-sanction-vendor').value
+      };
+
+      try {
+        const res = await fetch(`${API_BASE}/api/ocr/parse`, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          out.innerHTML = `<div class="result-callout danger"><strong>Error (${res.status}):</strong> ${data.detail || 'OCR parsing failed'}</div>`;
+          return;
+        }
+        out.innerHTML = renderOcrResult(data);
+      } catch (err) {
+        out.innerHTML = `<div class="result-callout danger"><strong>Error:</strong> ${err.message}</div>`;
+      }
+    }
+
+    // 3. NLP execution & Normal Text Renderer
+    function renderNlpResult(data) {
+      const urgencyBadge = data.urgency_level === 'CRITICAL' || data.urgency_level === 'HIGH' ? 'badge-high' : (data.urgency_level === 'MEDIUM' ? 'badge-med' : 'badge-low');
+      const hazardBadge = data.is_safety_hazard 
+        ? '<span class="badge badge-high" style="font-size:0.82rem; padding: 0.35rem 0.85rem;">⚠️ IMMEDIATE SAFETY HAZARD</span>' 
+        : '<span class="badge badge-low" style="font-size:0.82rem; padding: 0.35rem 0.85rem;">STANDARD CIVIC GRIEVANCE</span>';
+
+      return `
+        <div class="result-card">
+          <div class="result-header-bar">
+            <div>
+              <div style="font-size: 0.78rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em;">Citizen Grievance Triage (${data.complaint_id})</div>
+              <div style="font-size: 1.35rem; font-weight: 800; font-family: 'Outfit', sans-serif; margin-top: 0.2rem; color: #fff;">
+                Urgency Priority: ${data.urgency_level} (${(data.urgency_score * 100).toFixed(0)}%)
+              </div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+              <span class="badge ${urgencyBadge}">${data.urgency_level} PRIORITY</span>
+              ${hazardBadge}
+            </div>
+          </div>
+
+          <div class="result-callout ${data.is_safety_hazard ? 'danger' : 'info'}">
+            <div style="font-weight: 700; margin-bottom: 0.25rem;">Triage Summary:</div>
+            <div style="color: #e2e8f0; font-size: 0.88rem; line-height: 1.5;">${data.summary}</div>
+          </div>
+
+          <div style="margin-top: 0.75rem;">
+            <h4 style="font-size: 0.95rem; margin-bottom: 0.65rem; color: #f1f5f9;">Triage Classification:</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between;">
+                <span style="color: #cbd5e1;">Issue Category:</span>
+                <span class="badge badge-med">${data.category.replace(/_/g, ' ')}</span>
+              </li>
+              <li style="padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between;">
+                <span style="color: #cbd5e1;">Public Safety Hazard:</span>
+                <span style="color: ${data.is_safety_hazard ? '#fb7185' : '#34d399'}; font-weight: 600;">
+                  ${data.is_safety_hazard ? 'Immediate Physical Danger / Structural Risk' : 'No Acute Danger Reported'}
+                </span>
+              </li>
+              <li style="padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center;">
+                <span style="color: #cbd5e1;">Extracted Concern Keywords:</span>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; justify-content: flex-end;">
+                  ${(data.key_concerns || []).map(c => `<span class="badge badge-info" style="font-size: 0.72rem;">${c}</span>`).join('')}
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          ${data.risk_signals && data.risk_signals.length > 0 ? `
+            <div style="margin-top: 1rem;">
+              <h4 style="font-size: 0.9rem; margin-bottom: 0.5rem; color: #fb7185;">Auditor Risk Signals:</h4>
+              ${data.risk_signals.map(s => `
+                <div class="result-callout danger">
+                  <strong>[${s.signal_type}]</strong>: ${s.reason}
+                </div>
+              `).join('')}
+            </div>
+          ` : ''}
+
+          <details style="margin-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.75rem;">
+            <summary style="cursor: pointer; color: #64748b; font-size: 0.78rem;">View Raw JSON Payload</summary>
+            <pre class="json-pre">${JSON.stringify(data, null, 2)}</pre>
+          </details>
+        </div>
+      `;
+    }
+
+    async function runNlp() {
+      const out = document.getElementById('nlp-output');
+      out.innerHTML = '<div style="display: flex; align-items: center; gap: 0.5rem;"><div class="spinner"></div> Triaging grievance with NLP...</div>';
+      const payload = {
+        complaint_id: "COMP-2026-001",
+        text: document.getElementById('nlp-text').value
+      };
+
+      try {
+        const res = await fetch(`${API_BASE}/api/complaints/triage`, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          out.innerHTML = `<div class="result-callout danger"><strong>Error (${res.status}):</strong> ${data.detail || 'Grievance triage failed'}</div>`;
+          return;
+        }
+        out.innerHTML = renderNlpResult(data);
+      } catch (err) {
+        out.innerHTML = `<div class="result-callout danger"><strong>Error:</strong> ${err.message}</div>`;
+      }
+    }
+
+    // 4. Collusion clusters & Normal Text Renderer
+    function renderNetworkResult(data) {
+      const clusters = data.clusters || [];
+      return `
+        <div class="result-card">
+          <div class="result-header-bar">
+            <div>
+              <div style="font-size: 0.78rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em;">Collusion Graph Detection</div>
+              <div style="font-size: 1.35rem; font-weight: 800; font-family: 'Outfit', sans-serif; margin-top: 0.2rem; color: #fff;">
+                ${data.num_clusters} Collusion Rings Identified
+              </div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <span class="badge badge-high">${data.total_edges} Bipartite Connections</span>
+              <span class="badge badge-med">${data.num_clusters} Flagged Rings</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 0.75rem;">
+            <h4 style="font-size: 0.95rem; margin-bottom: 0.65rem; color: #f1f5f9;">Detected Contractor-Agency Co-Occurrence Rings:</h4>
+            ${clusters.length === 0 ? '<div style="color: #94a3b8; padding: 1rem 0;">No suspicious rings found above threshold.</div>' : ''}
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              ${clusters.map(cl => {
+                const riskBadge = cl.risk_score >= 0.7 ? 'badge-high' : 'badge-med';
+                return `
+                  <li style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.06);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                      <span style="font-weight: 700; color: #f1f5f9; font-size: 0.95rem;">
+                        Collusion Cluster #${cl.cluster_id}
+                      </span>
+                      <span class="badge ${riskBadge}">Risk Score: ${(cl.risk_score * 100).toFixed(0)}%</span>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.5rem; font-size: 0.8rem;">
+                      <div>
+                        <span style="color: #94a3b8;">Vendors:</span>
+                        ${cl.entity_ids.map(e => `<span class="badge badge-med" style="margin-left: 0.25rem;">${e}</span>`).join('')}
+                      </div>
+                      <div>
+                        <span style="color: #94a3b8;">Agencies / Officials:</span>
+                        ${cl.official_ids.map(o => `<span class="badge badge-low" style="margin-left: 0.25rem;">${o}</span>`).join('')}
+                      </div>
+                    </div>
+                    <div style="margin-top: 0.4rem;">
+                      <span style="font-size: 0.78rem; color: #94a3b8; font-weight: 600;">Suspicion Indicators:</span>
+                      <ul style="list-style: disc; margin-left: 1.25rem; margin-top: 0.25rem; font-size: 0.8rem; color: #cbd5e1;">
+                        ${cl.reasons.map(r => `<li>${r}</li>`).join('')}
+                      </ul>
+                    </div>
+                  </li>
+                `;
+              }).join('')}
+            </ul>
+          </div>
+
+          <details style="margin-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.75rem;">
+            <summary style="cursor: pointer; color: #64748b; font-size: 0.78rem;">View Raw JSON Payload</summary>
+            <pre class="json-pre">${JSON.stringify(data, null, 2)}</pre>
+          </details>
+        </div>
+      `;
+    }
+
+    async function loadCollusionClusters() {
+      const out = document.getElementById('network-output');
+      out.innerHTML = '<div style="display: flex; align-items: center; gap: 0.5rem;"><div class="spinner"></div> Building bipartite co-occurrence graph across 2,500 projects...</div>';
+
+      try {
+        const res = await fetch(`${API_BASE}/api/network/detect-clusters?min_score=0.5`, {
+          method: 'POST'
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          out.innerHTML = `<div class="result-callout danger"><strong>Error (${res.status}):</strong> ${data.detail || 'Collusion analysis failed'}</div>`;
+          return;
+        }
+        out.innerHTML = renderNetworkResult(data);
+      } catch (err) {
+        out.innerHTML = `<div class="result-callout danger"><strong>Error:</strong> ${err.message}</div>`;
+      }
+    }
+
+    // 5. Vision check & Normal Text Renderer
+    function renderVisionResult(dupData, geoData) {
+      const isDup = Array.isArray(dupData) && dupData.length > 0 && dupData[0].is_duplicate;
+      const dist = Array.isArray(dupData) && dupData.length > 0 ? dupData[0].hamming_distance : 0;
+      const imgA = Array.isArray(dupData) && dupData.length > 0 ? dupData[0].image_a_id : 'Photo_SiteA';
+      const imgB = Array.isArray(dupData) && dupData.length > 0 ? dupData[0].image_b_id : 'Photo_SiteB_Reused';
+
+      return `
+        <div class="result-card">
+          <div class="result-header-bar">
+            <div>
+              <div style="font-size: 0.78rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em;">Vision Analysis & Geotag Verification</div>
+              <div style="font-size: 1.35rem; font-weight: 800; font-family: 'Outfit', sans-serif; margin-top: 0.2rem; color: #fff;">
+                ${isDup ? 'Duplicate Photo Re-Use Detected' : 'Photo Fingerprint Is Unique'}
+              </div>
+            </div>
+            <div>
+              <span class="badge ${isDup ? 'badge-high' : 'badge-low'}" style="font-size: 0.82rem; padding: 0.35rem 0.85rem;">
+                ${isDup ? 'RECYCLED PHOTO FLAGGED' : 'UNIQUE PHOTO VERIFIED'}
+              </span>
+            </div>
+          </div>
+
+          <div style="margin-top: 0.75rem;">
+            <h4 style="font-size: 0.95rem; margin-bottom: 0.65rem; color: #f1f5f9;">Perceptual Hash Comparison (pHash):</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between;">
+                <span style="color: #cbd5e1;">Comparison Pair:</span>
+                <span style="color: #fff; font-weight: 600;">${imgA} vs ${imgB}</span>
+              </li>
+              <li style="padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between;">
+                <span style="color: #cbd5e1;">Perceptual Hamming Distance:</span>
+                <span class="badge ${dist <= 5 ? 'badge-high' : (dist <= 10 ? 'badge-med' : 'badge-low')}">${dist} bits difference</span>
+              </li>
+              <li style="padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between;">
+                <span style="color: #cbd5e1;">Fraud Classification:</span>
+                <span style="color: ${isDup ? '#fb7185' : '#34d399'}; font-weight: 600;">
+                  ${isDup ? 'IDENTICAL / REUSED PHOTO (Violates physical verification guidelines)' : 'ORIGINAL IMAGE (No duplicate found in registry)'}
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          ${geoData ? `
+            <div style="margin-top: 1.25rem;">
+              <h4 style="font-size: 0.95rem; margin-bottom: 0.65rem; color: #f1f5f9;">GPS Geotag Proximity Verification:</h4>
+              <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between;">
+                  <span style="color: #cbd5e1;">Claimed Project Site:</span>
+                  <span style="color: #fff;">${geoData.claimed_lat.toFixed(4)}, ${geoData.claimed_lon.toFixed(4)}</span>
+                </li>
+                <li style="padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between;">
+                  <span style="color: #cbd5e1;">Distance from Project Site:</span>
+                  <span class="badge ${geoData.is_within_threshold ? 'badge-low' : 'badge-high'}">
+                    ${geoData.distance_km != null ? geoData.distance_km.toFixed(2) + ' km' : '0.00 km'}
+                    ${geoData.is_within_threshold ? '(Within 1.0 km site radius)' : '(Out of site radius)'}
+                  </span>
+                </li>
+              </ul>
+            </div>
+          ` : ''}
+
+          <details style="margin-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.75rem;">
+            <summary style="cursor: pointer; color: #64748b; font-size: 0.78rem;">View Raw JSON Payload</summary>
+            <pre class="json-pre">${JSON.stringify({ duplicate_check: dupData, geotag_check: geoData }, null, 2)}</pre>
+          </details>
+        </div>
+      `;
+    }
+
+    async function runVisionCheck() {
+      const out = document.getElementById('vision-output');
+      out.innerHTML = '<div style="display: flex; align-items: center; gap: 0.5rem;"><div class="spinner"></div> Verifying image fingerprints and geocodes...</div>';
+      
+      const claimedLat = parseFloat(document.getElementById('vis-lat').value) || 28.6139;
+      const claimedLon = parseFloat(document.getElementById('vis-lon').value) || 77.2090;
+
+      const dupPayload = {
+        fingerprints: [
+          { image_id: "Photo_SiteA", phash: document.getElementById('vis-hash-a').value },
+          { image_id: "Photo_SiteB_Reused", phash: document.getElementById('vis-hash-b').value }
+        ],
+        hamming_threshold: 10
+      };
+
+      try {
+        const dupRes = await fetch(`${API_BASE}/api/vision/detect-duplicates`, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(dupPayload)
+        });
+        const dupData = await dupRes.json();
+
+        // Run geoverify
+        let geoData = null;
+        try {
+          const geoRes = await fetch(`${API_BASE}/api/vision/geoverify`, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+              fingerprint: {
+                image_id: "Photo_SiteA",
+                phash: document.getElementById('vis-hash-a').value,
+                gps_lat: claimedLat,
+                gps_lon: claimedLon
+              },
+              claimed_lat: claimedLat,
+              claimed_lon: claimedLon,
+              radius_km: 1.0
+            })
+          });
+          if (geoRes.ok) geoData = await geoRes.json();
+        } catch (e) {
+          console.warn('Geoverify note:', e);
+        }
+
+        out.innerHTML = renderVisionResult(dupData, geoData);
+      } catch (err) {
+        out.innerHTML = `<div class="result-callout danger"><strong>Error:</strong> ${err.message}</div>`;
+      }
+    }
+
+    // 6. NL Query & Normal Text Renderer
+    function renderQueryResult(data) {
+      const confText = typeof data.confidence === 'string' 
+        ? `${data.confidence} CONFIDENCE` 
+        : `Confidence: ${((data.confidence || 0.95) * 100).toFixed(0)}%`;
+      const confBadge = (typeof data.confidence === 'string' && data.confidence === 'HIGH') ? 'badge-low' : (data.confidence === 'LOW' ? 'badge-high' : 'badge-med');
+      const isGrounded = Boolean(data.data_used && data.data_used.length > 0);
+
+      return `
+        <div class="result-card">
+          <div class="result-header-bar">
+            <div>
+              <div style="font-size: 0.78rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em;">Natural Language Query Result</div>
+              <div style="font-size: 1.2rem; font-weight: 700; color: #fff; margin-top: 0.2rem;">
+                "${data.question}"
+              </div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <span class="badge badge-low">${isGrounded ? 'Grounded: Official Records' : 'General Grounding'}</span>
+              <span class="badge ${confBadge}">${confText}</span>
+            </div>
+          </div>
+
+          <div class="result-callout info" style="background: rgba(99, 102, 241, 0.08); border-left: 3px solid #6366f1;">
+            <div style="font-size: 0.8rem; color: #a5b4fc; font-weight: 700; margin-bottom: 0.35rem; text-transform: uppercase;">Official Data Grounded Response:</div>
+            <div style="color: #f1f5f9; font-size: 0.95rem; line-height: 1.6; white-space: pre-line;">${data.answer}</div>
+          </div>
+
+          ${data.warnings && data.warnings.length > 0 ? `
+            <div style="margin-top: 1rem;">
+              <h4 style="font-size: 0.85rem; color: #fbbf24; margin-bottom: 0.35rem;">Grounding Warnings:</h4>
+              ${data.warnings.map(w => `<div class="result-callout warning">${w}</div>`).join('')}
+            </div>
+          ` : ''}
+
+          <details style="margin-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.75rem;">
+            <summary style="cursor: pointer; color: #64748b; font-size: 0.78rem;">View Raw JSON Payload</summary>
+            <pre class="json-pre">${JSON.stringify(data, null, 2)}</pre>
+          </details>
+        </div>
+      `;
+    }
+
+    async function runNlQuery() {
+      const out = document.getElementById('query-output');
+      out.innerHTML = '<div style="display: flex; align-items: center; gap: 0.5rem;"><div class="spinner"></div> Querying grounded knowledge base...</div>';
+      const payload = {
+        question: document.getElementById('nl-question').value
+      };
+
+      try {
+        const res = await fetch(`${API_BASE}/api/query/ask`, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          out.innerHTML = `<div class="result-callout danger"><strong>Error (${res.status}):</strong> ${data.detail || 'Query processing failed'}</div>`;
+          return;
+        }
+        out.innerHTML = renderQueryResult(data);
+      } catch (err) {
+        out.innerHTML = `<div class="result-callout danger"><strong>Error:</strong> ${err.message}</div>`;
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', initDashboard);
+  </script>
+</body>
+</html>

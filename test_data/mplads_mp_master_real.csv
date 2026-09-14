@@ -1,0 +1,544 @@
+sr_no,state,mp_name,constituency,district,allocated_amount
+1,Maharashtra,Aashtikar Patil Nagesh Bapurao,HINGOLI,Hingoli,190289442.0
+2,Jammu And Kashmir,Abdul Rashid Sheikh,BARAMULLAH,Baramullah,154773472.11
+3,Bihar,Abhay Kumar Sinha,AURANGABAD_BR,Aurangabad_Br,147000000.0
+4,West Bengal,Abhijit Gangopadhyay,TAMLUK,Purba Medinipur,147000000.0
+5,West Bengal,Abu Taher Khan,MURSHIDABAD,Murshidabad,147000000.0
+6,West Bengal,Adhikari Soumendu,KANTHI,Purba Medinipur,147000000.0
+7,Uttar Pradesh,Aditya Yadav,BADAUN,Budaun,147000000.0
+8,Kerala,Adv Adoor Prakash,ATTINGAL,Thiruvananthapuram,147000000.0
+9,Kerala,Adv Dean Kuriakose,IDUKKI,Idukki,147000000.0
+10,Maharashtra,Adv Gowaal Kagada Padavi,NANDURBAR(ST),Nandurbar,147816309.11
+11,Kerala,Adv K Francis George,KOTTAYAM,Kottayam,188722256.11
+12,Uttar Pradesh,Afzal Ansari,GHAZIPUR,Ghazipur,220500000.0
+13,Jammu And Kashmir,Aga Syed Ruhullah Mehdi,SRINAGAR,Srinagar,147000000.0
+14,Uttarakhand,Ajay Bhatt,NAINITAL UDHAM SINGH NAG.,Udhamsingh Nagar,147000000.0
+15,Bihar,Ajay Kumar Mandal,BHAGALPUR,Bhagalpur,147000000.0
+16,Uttarakhand,Ajay Tamta,ALMORA(SC),Almora,147000000.0
+17,Uttar Pradesh,Ajendra Singh Lodhi,HAMIRPUR_UP,Hamirpur_Up,147000000.0
+18,Uttar Pradesh,Akhilesh Yadav,KANNAUJ,Kannauj,147000000.0
+19,Uttar Pradesh,Akshaya Yadav,FIROZABAD,Firozabad,147000000.0
+20,Manipur,Alfred Kanngam S Arthur,OUTER MANIPUR(ST),Churachandpur,147000000.0
+21,Bihar,Alok Kumar Suman,GOPALGANJ (SC),Gopalganj,147000000.0
+22,Madhya Pradesh,Alok Sharma,BHOPAL,Bhopal,147000000.0
+23,Maharashtra,Amar Sharadrao Kale,WARDHA,Wardha,147000000.0
+24,Assam,Amarsing Tisso Diphu,(ST),,147000000.0
+25,Andhra Pradesh,Ambica G Lakshminarayana Valmiki,ANANTAPUR,Anantapur,201899064.11
+26,Maharashtra,Amol Ramsing Kolhe,SHIRUR,Pune,147000000.0
+27,Rajasthan,Amraram,SIKAR,Sikar,165691544.11
+28,Punjab,Amrinder Singh Raja Warring,LUDHIANA,Ludhiana,147000000.0
+29,Uttar Pradesh,Anand Bhadauriya,DHAURAHRA,Kheri,147000000.0
+30,Uttar Pradesh,Anand Kumar,BAHRAICH(SC),Bahraich,147000000.0
+31,Odisha,Ananta Nayak,KEONJHAR(ST),Keonjhar,147000000.0
+32,Tamil Nadu,Andimuthu Raja,NILGIRIS(SC),Nilgiris,147000000.0
+33,Meghalaya,Andrew J. Syngkon,SHILLONG,East Khasi Hills,98000000.0
+34,Manipur,Angomcha Bimol Akoijam,INNER MANIPUR,Imphal West,147000000.0
+35,Uttarakhand,Anil Baluni,GARHWAL,Pauri Garhwal,147000000.0
+36,Maharashtra,Anil Yeshwant Desai,MUMBAI SOUTH CENTRAL,Mumbai City,147000000.0
+37,Madhya Pradesh,Anita Nagarsingh Chouhan,RATLAM(ST),Jhabua,147000000.0
+38,Odisha,Anita Subhadarshini,ASKA,Ganjam,147000000.0
+39,Jharkhand,Annpurna Devi,KODARMA,Giridih,166665931.8
+40,Uttar Pradesh,Anoop Pradhan Balmiki,HATHRAS (SC),Mahamayanagar,147000000.0
+41,Kerala,Anto Antony,PATHANAMTHITTA,Pathanamthitta,147000000.0
+42,Maharashtra,Anup Sanjay Dhotre,AKOLA,Akola,147000000.0
+43,Uttar Pradesh,Anurag Sharma,JHANSI,Jhansi,147000000.0
+44,Himachal Pradesh,Anurag Singh Thakur,HAMIRPUR_HP,Hamirpur_Hp,149570117.11
+45,Andhra Pradesh,Appalanaidu Kalisetti,VIZIANAGARAM,Vizianagaram,147000000.0
+46,Bihar,Arun Bharti,JAMUI(SC),Jamui,194924621.11
+47,Uttar Pradesh,Arun Govil,MEERUT,Meerut,147000000.0
+48,Tamil Nadu,Arun Nehru,PERAMBALUR,Perambalur,147000000.0
+49,Telangana,Aruna. D. K,MAHABUBNAGAR,Mahbubnagar,147000000.0
+50,West Bengal,Arup Chakraborty,BANKURA,Bankura,147000000.0
+51,Telangana,Arvind Dharmapuri,NIZAMABAD,Nizamabad,281396355.11
+52,Maharashtra,Arvind Ganpat Sawant,MUMBAI SOUTH,Mumbai City,147000000.0
+53,Telangana,Asaduddin Owaisi,HYDERABAD,Hyderabad,147000000.0
+54,Madhya Pradesh,Ashish Dubey,JABALPUR,Jabalpur,147000000.0
+55,Uttar Pradesh,Ashok Kumar Rawat,MISRIKH(SC),Sitapur,147000000.0
+56,Bihar,Ashok Kumar Yadav,MADHUBANI,Madhubani,147000000.0
+57,West Bengal,Asit Kumar Mal,BOLPUR(SC),Birbhum,275694456.74
+58,Uttar Pradesh,Atul Garg,GHAZIABAD,Ghaziabad,155336470.0
+59,Odisha,Avimanyu Sethi,BHADRAK(SC),Bhadrak,147000000.0
+60,Uttar Pradesh,Awadhesh Prasad,FAIZABAD,Faizabad,147000000.0
+61,West Bengal,Azad Kirti Jha,BARDHAMAN-DURGAPUR,Burdwan,179658399.98
+62,Andhra Pradesh,B K Parthasarathi,HINDUPUR,Anantapur,160491894.11
+63,Uttar Pradesh,Babu Singh Kushwaha,JAUNPUR,Jaunpur,147000000.0
+64,Maharashtra,Bachhav Shobha Dinesh,DHULE,Dhule,147000000.0
+65,West Bengal,Bag Mitali,ARAMBAG(SC),Hooghly,147000000.0
+66,Odisha,Baijayant Panda,KENDRAPARA,Kendrapara,147000000.0
+67,Maharashtra,Bajrang Manohar Sonwane,BEED,Beed,165899107.19
+68,Odisha,Balabhadra Majhi,NABARANGPUR(ST),Nabarangpur,147413962.11
+69,Andhra Pradesh,Balashowry Vallabbhaneni,MACHILIPATNAM,Krishna,147000000.0
+70,Telangana,Balram Naik Porika,MAHABUBABAD,Mahabubabad,147000000.0
+71,Maharashtra,Balwant Baswant Wankhade,AMRAVATI(SC),Amravati,198293678.0
+72,Maharashtra,Balya Mama Suresh Gopinath Mhatre,BHIWANDI,Thane,147000000.0
+73,Delhi,Bansuri Swaraj,NEW DELHI,Commissioner North Delhi Municipal Corporation,154306950.0
+74,West Bengal,Bapi Haldar,MATHURAPUR(SC),South Twenty Four Parganas,147000000.0
+75,Karnataka,Basavaraj Bommai,HAVERI,Haveri,147000000.0
+76,Andhra Pradesh,Bastipati Nagaraju Panchalingala,KURNOOL,Kurnool,159998515.11
+77,Rajasthan,Bhagirath Chaudhary,AJMER,Ajmer,147000000.0
+78,Rajasthan,Bhajan Lal Jatav,KARAULI-DHOLPUR(SC),Karauli,147000000.0
+79,Madhya Pradesh,Bharat Singh Kushwah,GWALIOR,Gwalior,151455276.04
+80,Gujarat,Bharatbhai Manubhai Sutariya,AMRELI,Amreli,147000000.0
+81,Gujarat,Bharatsinhji Shankarji Dabhi,PATAN,Patan,147000000.0
+82,Madhya Pradesh,Bharti Pardhi,BALAGHAT,Balaghat,154398389.01
+83,Maharashtra,Bhaskar Murlidhar Bhagare,DINDORI(ST),Nashik,147000000.0
+84,Maharashtra,Bhausaheb Rajaram Wakchaure,SHIRDI(SC),Ahmadnagar,147000000.0
+85,Chhattisgarh,Bhojraj Nag,KANKER(ST),Uttar Bastar Kanker,164672734.11
+86,Uttar Pradesh,Bhola Singh,BULANDSHAHR(SC),Bulandshahr,147000000.0
+87,Maharashtra,Bhumare Sandipanrao Asaram,AURANGABAD_MH,Aurangabad_Mh,147000000.0
+88,Andhra Pradesh,Bhupathiraju Srinivasa Varma,NARASAPURAM,West Godavari,147000000.0
+89,Rajasthan,Bhupender Yadav,ALWAR,Alwar,147000000.0
+90,Odisha,Bibhu Prasad Tarai,JAGATSINGHPUR(SC),Jagatsinghpur,147000000.0
+91,Jharkhand,Bidyut Baran Mahato,JAMSHEDPUR,East Singhbum,147000000.0
+92,Assam,Bijuli Kalita Medhi,GUWAHATI,Kamrup Metropolitan,147000000.0
+93,Tripura,Biplab Kumar Deb,TRIPURA WEST,West Tripura,147000000.0
+94,Andaman And Nicobar Islands,Bishnu Pada Ray Andaman And Nicobar,ISLANDS,Islands,147000000.0
+95,Rajasthan,Brijendra Singh Ola,JHUNJHUNU,Jhunjhunu,147000000.0
+96,Chhattisgarh,Brijmohan Agrawal,RAIPUR,Raipur,153766451.11
+97,Madhya Pradesh,Bunty Vivek Sahu,CHHINDWARA,Chhindwara,147000000.0
+98,Gujarat,C R Patil,NAVSARI,Navsari,158532494.36
+99,Andhra Pradesh,C.M.Ramesh,ANAKAPALLE,Visakhapatnam,202531656.11
+100,Karnataka,Captain Brijesh Chowta,DAKSHINA KANNADA,Dakshin Kannad,147000000.0
+101,Goa,Captain Viriato Fernandes,SOUTH GOA,South Goa,147000000.0
+102,Telangana,Chamala Kiran Kumar Reddy,BHONGIR,Nalgonda,147000000.0
+103,Uttar Pradesh,Chandan Chauhan,BIJNOR,Bijnore,147000000.0
+104,Rajasthan,Chandra Prakash Joshi,CHITTORGARH,Chittorgarh,147000000.0
+105,Uttar Pradesh,Chandra Shekhar,NAGINA(SC),Bijnore,147000000.0
+106,Gujarat,Chandubhai Chhaganbhai Shihora,SURENDRANAGAR,Surendranagar,147000000.0
+107,Punjab,Charanjit Singh Channi,JALANDHAR(SC),Jalandhar,147000000.0
+108,Maharashtra,Chavan Vasantrao Balwantrao,NANDED,Nanded,147000000.0
+109,Uttar Pradesh,Chhatra Pal Singh Gangwar,BAREILLY,Bareilly,147000000.0
+110,Maharashtra,Chhatrapati Shahu Shahaji,KOLHAPUR,Kolhapur,147000000.0
+111,Uttar Pradesh,Chhotelal,ROBERTSGANJ(SC),Sonbhadra,147000000.0
+112,Chhattisgarh,Chintamani Maharaj,SARGUJA(ST),Surguja,147000000.0
+113,Bihar,Chirag Paswan,HAJIPUR(SC),Vaishali,147000000.0
+114,Tamil Nadu,Cn Annadurai,TIRUVANNAMALAI,Tiruvannamalai,148579509.11
+115,Tamil Nadu,D M Kathir Anand,VELLORE,Vellore,160196941.11
+116,Tamil Nadu,D Ravikumar,VILUPPURAM(SC),Villupuram,197598306.11
+117,Andhra Pradesh,Daggubati Purandeshwari,RAJAHMUNDRY,East Godavari,147000000.0
+118,Andhra Pradesh,Daggumalla Prasada Rao,CHITTOOR,Chittoor,147000000.0
+119,Rajasthan,Damodar Agarwal,BHILWARA,Bhilwara,147000000.0
+120,Uttar Pradesh,Daroga Prasad Saroj,LALGANJ (SC),Azamgarh,147000000.0
+121,Madhya Pradesh,Darshan Singh Choudhary,HOSHANGABAD,Hoshangabad,147000000.0
+122,Haryana,Deepender Singh Hooda,ROHTAK,Rohtak,147000000.0
+123,Uttar Pradesh,Devendra Alias Bhole Singh,AKBARPUR,Kanpur Nagar,147000000.0
+124,Bihar,Devesh Chandra Thakur,SITAMARHI,Sitamarhi,163809205.11
+125,Uttar Pradesh,Devesh Shakya,ETAH,Etah,147000000.0
+126,Gujarat,Devusinh Jesingbhai Chauhan,KHEDA,Kheda,147000000.0
+127,Maharashtra,Dhairyasheel Sambhajirao Mane,HATKANANGLE,Kolhapur,147000000.0
+128,Maharashtra,Dhanorkar Pratibha Suresh Alias Balubhau,CHANDRAPUR,Chandrapur,147000000.0
+129,Odisha,Dharmendra Pradhan,SAMBALPUR,Sambalpur,147000000.0
+130,Uttar Pradesh,Dharmendra Yadav,AZAMGARH,Azamgarh,147000000.0
+131,Gujarat,Dhaval Laxmanbhai Patel,VALSAD(ST),Valsad,147000000.0
+132,Bihar,Dileshwar Kamait,SUPAUL,Supaul,150450930.89
+133,Assam,Dilip Saikia,Darrang-Udalguri,Darrang-Udalguri,147000000.0
+134,Bihar,Dinesh Chandra Yadav,MADHEPURA,Madhepura,150070866.11
+135,Gujarat,Dineshbhai Makwana,AHMEDABAD WEST(SC),Ahmedabad,160434965.11
+136,Andhra Pradesh,Dr Byreddy Shabari,NANDYAL,Kurnool,150675889.11
+137,Karnataka,Dr C N Manjunath,BANGALORE RURAL,Ramanagara,147000000.0
+138,Andhra Pradesh,Dr Chandra Sekhar Pemmasani,GUNTUR,Guntur,159774113.11
+139,Punjab,Dr Dharamvira Gandhi,PATIALA,Patiala,147000000.0
+140,West Bengal,Dr Jayanta Kumar Roy,JALPAIGURI(SC),Jalpaiguri,147000000.0
+141,Maharashtra,Dr Kalge Shivaji Bandappa,LATUR(SC),Latur,147000000.0
+142,Bihar,Dr Mohammad Jawed,KISHANGANJ,Kishanganj,148669229.11
+143,Uttar Pradesh,Dr Rajkumar Sangwan,BAGHPAT,Baghpat,147000000.0
+144,Tamil Nadu,Dr Rani Sri Kumar,TENKASI(SC),Tirunelveli,153060922.82
+145,Kerala,Dr Shashi Tharoor,THIRUVANANTHAPURAM,Thiruvananthapuram,147000000.0
+146,West Bengal,Dr Sukanta Majumdar,BALURGHAT,South Dinajpur,157085364.9
+147,Gujarat,Dr. Hemang Joshi,VADODARA,Vadodara,147000000.0
+148,Maharashtra,Dr. Hemant Vishnu Savara,PALGHAR(ST),Thane,147000000.0
+149,Maharashtra,Dr. Kirsan Namdeo,GADCHIROLI-CHIMUR(ST),Garchiroli,147000000.0
+150,Madhya Pradesh,Dr. Lata Wankhede,SAGAR,Sagar,147000000.0
+151,Kerala,Dr. M.P Abdussamad Samadani,PONNANI,Malappuram,170434031.11
+152,Gujarat,Dr. Mansukh Mandaviya,PORBANDAR,Porbandar,147000000.0
+153,Karnataka,Dr. Prabha Mallikarjun,DAVANAGERE,Davangere,147000000.0
+154,Odisha,Dr. Pradeep Kumar Panigrahy,BERHAMPUR,Ganjam,147000000.0
+155,Maharashtra,Dr. Prashant Yadaorao Padole,BHANDARA-GONDIYA,Gondia,159680283.39
+156,Punjab,Dr. Raj Kumar Chabbewal,HOSHIARPUR(SC),Hoshiarpur,147000000.0
+157,Madhya Pradesh,Dr. Rajesh Mishra,SIDHI,Sidhi,262724510.35
+158,Uttar Pradesh,Dr. S P Singh,PRATAPGARH,Pratapgarh,147000000.0
+159,West Bengal,Dr. Sharmila Sarkar,BARDHAMAN PURBA(SC),Burdwan,147000000.0
+160,Karnataka,Dr.K.Sudhakar,CHIKBALLAPUR,Chikballapur,147000000.0
+161,Telangana,Dr.Mallu Ravi,NAGARKURNOOL(SC),Mahbubnagar,147000000.0
+162,Jharkhand,Dulu Mahato,DHANBAD,Dhanbad,147000000.0
+163,Tamil Nadu,Durai Vaiko,TIRUCHIRAPPALLI,Tiruchirappalli,147000000.0
+164,Madhya Pradesh,Durga Das Uikey,BETUL(ST),Betul,151569502.91
+165,Rajasthan,Dushyant Singh,JHALAWAR-BARAN,Jhalawar,147000000.0
+166,Karnataka,E. Tukaram,BELLARY(ST),Ballari,147000000.0
+167,Kerala,E.T. Mohammed Basheer,MALAPPURAM,Malappuram,163895872.11
+168,Telangana,Eatala Rajender,MALKAJGIRI,Rangareddy,327477390.86
+169,Tamil Nadu,Eswarasamy K,POLLACHI,Coimbatore,162315106.11
+170,Madhya Pradesh,Faggan Singh Kulaste,MANDLA(ST),Mandla,151861648.41
+171,Karnataka,G. Kumar Naik,RAICHUR(ST),Raichur,147000000.0
+172,Maharashtra,Gaikwad Varsha Eknath,MUMBAI NORTH-CENTRAL,Mumbai Suburban,147000000.0
+173,Madhya Pradesh,Gajendra Singh Patel,KHARGONE(ST),Khargaon,147000000.0
+174,Rajasthan,Gajendra Singh Shekhawat,JODHPUR,Jodhpur,147000000.0
+175,Tamil Nadu,Ganapathy Rajkumar P,COIMBATORE,Coimbatore,147370490.11
+176,Tamil Nadu,Ganesan Selvam,KANCHEEPURAM(SC),Kanchipuram,186508749.11
+177,Madhya Pradesh,Ganesh Singh,SATNA,Satna,147000000.0
+178,Assam,Gaurav Gogoi,JORHAT,Jorhat,147000000.0
+179,Gujarat,Geniben Nagaji Thakor,BANASKANTHA,Banaskantha,147000000.0
+180,Bihar,Giridhari Yadav,BANKA,Banka,147000000.0
+181,Bihar,Giriraj Singh,BEGUSARAI,Begusarai,147000000.0
+182,Andhra Pradesh,Gm Harish Balayogi,AMALAPURAM(SC),East Godavari,147000000.0
+183,Telangana,Godam Nagesh,ADILABAD(ST),Adilabad,147000000.0
+184,Tamil Nadu,Gopinath K,KRISHNAGIRI,Krishnagiri,147000000.0
+185,Karnataka,Govind Makthappa Karjol,CHITRADURGA(SC),Chitradurga,147000000.0
+186,Andhra Pradesh,Gumma Thanuja Rani,ARAKU(ST),Vizianagaram,149458905.11
+187,Punjab,Gurmeet Singh Meet Hayer,SANGRUR,Sangrur,147000000.0
+188,Madhya Pradesh,Gyaneshwar Patil,KHANDWA,Khandwa,155690684.77
+189,Karnataka,H.D. Kumaraswamy,MANDYA,Mandya,147000000.0
+190,Uttar Pradesh,Harendra Singh Malik,MUZAFFARNAGAR,Muzaffarnagar,147000000.0
+191,Gujarat,Haribhai Patel,MAHESANA,Mahesana,147000000.0
+192,Rajasthan,Harish Chandra Meena,TONK-SAWAI MADHOPUR,Sawaimadhopur,147000000.0
+193,Delhi,Harsh Malhotra,EAST DELHI,Commissioner East Delhi Municipal Corporation,147134131.0
+194,Gujarat,Hasmukh Bhai Soma Bhai Patel,AHMEDABAD EAST,Ahmedabad,147000000.0
+195,Uttar Pradesh,Imran Masood,SAHARANPUR,Saharanpur,147000000.0
+196,Sikkim,Indra Hang Subba,SIKKIM,East District,152003923.11
+197,Uttar Pradesh,Iqra Choudhary,KAIRANA,Shamli,147000000.0
+198,West Bengal,Isha Khan Choudhury,MALDAHA DAKSHIN,Malda,147000000.0
+199,West Bengal,Jagadish Chandra Barma Basunia,COOCHBEHAR(SC),Cooch Behar,168604641.11
+200,Karnataka,Jagadish Shettar,BELGAUM,Belagavi,147000000.0
+201,West Bengal,Jagannath Sarkar,RANAGHAT(SC),Nadia,147000000.0
+202,Uttar Pradesh,Jagdambika Pal,DOMARIYAGANJ,Siddharth Nagar,160643957.11
+203,Haryana,Jai Parkash,HISAR,Hissar,147000000.0
+204,Uttar Pradesh,Jai Prakash,HARDOI (SC),Hardoi,147000000.0
+205,Madhya Pradesh,Janardan Mishra,REWA,Rewa,147000000.0
+206,Gujarat,Jashubhai Bhilubhai Rathva,CHHOTA UDAIPUR(ST),Vadodara,147000000.0
+207,Gujarat,Jaswantsinh Sumanbhai Bhabhor,DAHOD(ST),Dahod,147000000.0
+208,Bihar,Jitan Ram Manjhi,GAYA (SC),Gaya,147000000.0
+209,Uttar Pradesh,Jitendra Kumar Dohare,ETAWAH(SC),Etawah,188747306.26
+210,Jammu And Kashmir,Jitendra Singh,UDHAMPUR,Kathua,147000000.0
+211,Uttar Pradesh,Jitin Prasada,PILIBHIT,Pilibhit,147000000.0
+212,Jharkhand,Joba Majhi,SINGHBHUM(ST),Chaibas (W.Singhbhum),147000000.0
+213,Assam,Joyanta Basumatary,KOKRAJHAR (ST),Kokrajhar,147000000.0
+214,West Bengal,June Maliah,MEDINIPUR,Paschimi Medinipur,147000000.0
+215,Madhya Pradesh,Jyotiraditya M. Scindia,GUNA,Guna,147000000.0
+216,Chhattisgarh,Jyotsna Charandas Mahant,KORBA,Korba,155153738.11
+217,Tamil Nadu,K E Prakash,ERODE,Erode,147000000.0
+218,Kerala,K Radhakrishnan,ALATHUR(SC),Palakkad,147000000.0
+219,Tamil Nadu,K Subbarayan,TIRUPPUR,Tirupur,147000000.0
+220,Kerala,K. C Venugopal,ALAPPUZHA,Alappuzha,147000000.0
+221,Karnataka,K. Rajashekar Basavaraj Hitnal,KOPPAL,Koppal,147000000.0
+222,Telangana,Kadiyam Kavya,WARANGEL(SC),Hanumakonda,147000000.0
+223,West Bengal,Kakoli Ghosh Dastidar,BARASAT,North Twenty Four Parganas,147000000.0
+224,The Dadra And Nagar Haveli And Daman And Diu,Kalaben Mohanbhai Delkar Dadra & Nagar Haveli,(ST),,269500000.0
+225,Tamil Nadu,Kalanidhi Veeraswamy,CHENNAI NORTH,Chennai,171500000.0
+226,Jharkhand,Kali Charan Munda,KHUNTI(ST),Khunti,147000000.0
+227,Jharkhand,Kali Charan Singh,CHATRA,Chatra,147000000.0
+228,West Bengal,Kalipada Saren,JHARGRAM(ST),Paschimi Medinipur,147000000.0
+229,West Bengal,Kalyan Banerjee,SREERAMPUR,Hooghly,147000000.0
+230,Maharashtra,Kalyan Vaijinathrao Kale,JALNA,Jalna,147000000.0
+231,Assam,Kamakhya Prasad Tasa,Kaziranga,Kaziranga,147000000.0
+232,Delhi,Kamaljeet Sehrawat,WEST DELHI,Commissioner South Delhi Municipal Corporation,147000000.0
+233,Chhattisgarh,Kamlesh Jangde,JANJGIR CHAMPA(SC),Janjgir-Champa,150384382.11
+234,Uttar Pradesh,Kamlesh Paswan,BANSGAON(SC),Gorakhpur,147000000.0
+235,Himachal Pradesh,Kangana Ranaut,MANDI,Mandi,147000000.0
+236,Tamil Nadu,Kani K Navas,RAMANATHAPURAM,Ramanathapuram,147000000.0
+237,Tamil Nadu,Kanimozhi Karunanidhi,THOOTHUKKUDI,Tuticorin,147000000.0
+238,Uttar Pradesh,Kanwar Singh Tanwar,AMROHA,Jyotiba Pholenagar,147000000.0
+239,Uttar Pradesh,Karan Bhushan Singh,KAISERGANJ,Gonda,147000000.0
+240,West Bengal,Kartick Chandra Paul,RAIGANJ,North Dinajpur,202677986.56
+241,Bihar,Kaushalendra Kumar,NALANDA,Bihar Sharif/Nalanda,147000000.0
+242,West Bengal,Khagen Murmu,MALDAHA UTTAR,Malda,147000000.0
+243,West Bengal,Khalilur Rahaman,JANGIPUR,Murshidabad,147000000.0
+244,Andhra Pradesh,Kinjarapu Ram Mohan Naidu,SRIKAKULAM,Srikakulam,171200630.11
+245,Arunachal Pradesh,Kiren Rijiju,ARUNACHAL WEST,West Siang,147000000.0
+246,Uttar Pradesh,Kirti Vardhan Singh,GONDA,Gonda,147000000.0
+247,Telangana,Kishan Reddy Gangapuram,SECUNDERABAD,Hyderabad,147000000.0
+248,Uttar Pradesh,Kishori Lal,AMETHI,Amethi,171500000.0
+249,Telangana,Konda Vishweshwar Reddy,CHELVELLA,Rangareddy,233721420.96
+250,Karnataka,Kota Srinivas Poojary,UDUPI CHIKMAGALUR,Udupi,147000000.0
+251,Assam,Kripanath Mallah,KARIMGANJ (SC),Karim Ganj,147000000.0
+252,Haryana,Krishan Pal Gurjar,FARIDABAD,Faridabad,147000000.0
+253,Uttar Pradesh,Krishna Devi Shivshanker Patel,BANDA,Banda,147000000.0
+254,Andhra Pradesh,Krishna Prasad Tenneti,BAPATLA,Prakasam,167796849.11
+255,Tripura,Kriti Devi Debbarman,TRIPURA EAST(ST),Dhalai District,147000000.0
+256,Rajasthan,Kuldeep Indora,GANGANAGAR(SC),Sriganganagar,147000000.0
+257,Telangana,Kunduru Raghuveer,NALGONDA,Nalgonda,162952022.0
+258,Uttar Pradesh,Lalji Verma,AMBEDKAR NAGAR,Ambedkarnagar,147000000.0
+259,Andhra Pradesh,Lavu Sri Krishna Devarayalu,NARASARAOPET,Guntur,174009663.11
+260,Uttar Pradesh,Laxmikant Pappu Nishad,SANT KABIR NAGAR,Sant Kabir Nagar,147000000.0
+261,Bihar,Lovely Anand,SHEOHAR,Sitamarhi,147000000.0
+262,Rajasthan,Lumbaram,JALORE,Jalore,147000000.0
+263,Karnataka,M. Mallesh Babu,KOLAR(SC),Kolar,147065957.11
+264,Tamil Nadu,M.K. Vishnuprasad,CUDDALORE,Cuddalore,147000000.0
+265,Andhra Pradesh,Maddila Gurumoorthy,TIRUPATI(SC),Chittoor,180399007.0
+266,Telangana,Madhavaneni Raghunandan Rao,MEDAK,Medak,147000000.0
+267,Andhra Pradesh,Magunta Sreenivasulu Reddy,ONGOLE,Prakasam,147000000.0
+268,Madhya Pradesh,Mahendra Singh Solanky,DEWAS(SC),Shajapur,147000000.0
+269,Chhattisgarh,Mahesh Kashyap,BASTAR(ST),Bastar,147000000.0
+270,Uttar Pradesh,Mahesh Sharma,GAUTAM BUDDHA NAGAR,Gautambudhnagar,148816284.11
+271,Rajasthan,Mahima Kumari Mewar,RAJSAMAND,Rajsamand,183892143.0
+272,Uttarakhand,Mala Rajya Laxmi Shah,TEHRI GARHWAL,Tehri Garhwal,147000000.0
+273,West Bengal,Mala Roy,KOLKATA DAKSHIN,Kolkata,147000000.0
+274,Tamil Nadu,Malaiyarasan D,KALLAKURICHI,Villupuram,201599593.0
+275,Odisha,Malvika Devi,KALAHANDI,Kalahandi,147000000.0
+276,Punjab,Malvinder Singh Kang,ANANDPUR SAHIB,Rupnagar,147000000.0
+277,Tamil Nadu,Mani. A.,DHARAMAPURI,Dharmapuri,164515071.11
+278,Tamil Nadu,Manickam Tagore B,VIRUDHUNAGAR,Virudhunagar,147000000.0
+279,Jharkhand,Manish Jaiswal,HAZARIBAGH,Hazaribagh,147000000.0
+280,Chandigarh,Manish Tewari,CHANDIGARH,Chandigarh,178351443.75
+281,Rajasthan,Manju Sharma,JAIPUR,Jaipur,167082901.11
+282,Rajasthan,Manna Lal Rawat,UDAIPUR(ST),Udaipur,147000000.0
+283,Haryana,Manohar Lal,KARNAL,Karnal,147000000.0
+284,Bihar,Manoj Kumar,SASARAM(SC),Kaimur (Bhabua),147000000.0
+285,West Bengal,Manoj Tigga,ALIPURDUARS(ST),Jalpaiguri,147000000.0
+286,Delhi,Manoj Tiwari,NORTH EAST DELHI,Commissioner East Delhi Municipal Corporation,225843858.0
+287,Gujarat,Mansukhbhai Dhanjibhai Vasava,BHARUCH,Bharuch,147000000.0
+288,Jammu And Kashmir,Mian Altaf Ahmad,ANANTNAG,Anantnag,147000000.0
+289,Andhra Pradesh,Midhun Reddy,RAJAMPET,Cuddapah,178951477.11
+290,Bihar,Misha Bharti,PATALIPUTRA,Patna,147000000.0
+291,Gujarat,Mitesh Rameshbhai Bakabhai Patel,ANAND,Anand,147000000.0
+292,Ladakh,Mohamed Haneefa,LADAKH,Leh,161114542.0
+293,Uttar Pradesh,Mohibbullah,RAMPUR,Rampur,147000000.0
+294,Maharashtra,Mohite Patil Dhairyasheel Rajsinh,MADHA,Solapur,195613601.7
+295,Bihar,Mr Gopal Jee Thakur,DARBHANGA,Darbanga,147000000.0
+296,West Bengal,Ms Mahua Moitra,KRISHNANAGAR,Nadia,159865046.0
+297,Lakshadweep,Muhammed Hamdullah Sayeed,LAKSHADWEEP(ST),Lakshadweep,153942460.41
+298,Uttar Pradesh,Mukesh Rajput,FARRUKHABAD,Farrukhabad,147000000.0
+299,Gujarat,Mukeshkumar Chandrakaant Dalal,SURAT,Surat,147000000.0
+300,Rajasthan,Murari Lal Meena,DAUSA(ST),Dausa,147000000.0
+301,Tamil Nadu,Murasoli S,THANJAVUR,Thanjavur,147000000.0
+302,Maharashtra,Murlidhar Mohol,PUNE,Pune,147000000.0
+303,Odisha,Naba Charan Majhi,MAYURBHANJ (ST),Mayurbhanj,147563957.11
+304,Jharkhand,Nalin Soren,DUMKA(ST),Dumka,147364097.11
+305,Uttar Pradesh,Narayan Das Ahirwar,JALAUN(SC),Jalaun,147000000.0
+306,Maharashtra,Narayan Tatu Rane,RATNAGIRI-SINDHUDURG,Sindhudurg,147000000.0
+307,Uttar Pradesh,Naresh Chandra Uttam Patel,FATEHPUR,Fatehpur,147000000.0
+308,Maharashtra,Naresh Ganpat Mhaske,THANE,Thane,147000000.0
+309,Haryana,Naveen Jindal,KURUKSHETRA,Kurukshetra,147000000.0
+310,Uttar Pradesh,Neeraj Maurya,AONLA,Bareilly,147000000.0
+311,Maharashtra,Nilesh Dnyandev Lanke,AHMEDNAGAR,Ahmadnagar,147000000.0
+312,Gujarat,Nimuben Jayantibhai Bambhaniya,BHAVNAGAR,Bhavnagar,147000000.0
+313,Jharkhand,Nishikant Dubey,GODDA,Godda,147000000.0
+314,Maharashtra,Nitin Jairam Gadkari,NAGPUR,Nagpur,168195086.11
+315,Bihar,Nityanand Rai,UJJARPUR,Samastipur,147000000.0
+316,Rajasthan,Om Birla,KOTA,Kota,163906956.6
+317,Maharashtra,Omprakash Bhupalsinh Alias Pawan Rajenimbalkar,OSMANABAD,Osmanabad,184758519.11
+318,Karnataka,P C Mohan,BANGALORE CENTRAL,Bengaluru Urban,159995711.11
+319,Uttar Pradesh,Pankaj Chowdhary,MAHARAJGANJ_UP,Maharajganj_Up,147000000.0
+320,Assam,Parimal Suklabaidya,SILCHAR,Cachar,148300157.11
+321,Gujarat,Parshottambhai Rupala,RAJKOT,Rajkot,147000000.0
+322,West Bengal,Partha Bhowmick,BARRACKPUR,North Twenty Four Parganas,147000000.0
+323,Karnataka,Parvatagouda Chandanagouda Gaddigoudar,BAGALKOT,Bagalkot,167541747.11
+324,The Dadra And Nagar Haveli And Daman And Diu,Patel Umeshbhai Babubhai Daman And,DIU,Diu,245063957.0
+325,West Bengal,Pathan Yusuf,BAHARAMPUR,Murshidabad,147000000.0
+326,Assam,Phani Bhusan Choudhury,BARPETA,Barpeta,147000000.0
+327,Maharashtra,Piyush Vedprakash Goyal,MUMBAI NORTH,Mumbai Suburban,147000000.0
+328,Andhra Pradesh,Prabhakar Reddy Vemireddy,NELLORE(SC),Nellore,147000000.0
+329,Gujarat,Prabhubhai Nagarbhai Vasava,BARDOLI(ST),Surat,147000000.0
+330,Assam,Pradan Baruah,LAKHIMPUR,Lakhimpur,147000000.0
+331,Bihar,Pradeep Kumar Singh,ARARIA,Araria,147000000.0
+332,Odisha,Pradeep Purohit,BARGARH,Baragarh,147000000.0
+333,Assam,Pradyut Bordoloi,NOWGONG,Nowgong,98000000.0
+334,Karnataka,Pralhad Venkatesh Joshi,DHARWAD,Dharwar,147000000.0
+335,Maharashtra,Praniti Sushilkumar Shinde,SOLAPUR(SC),Solapur,147000000.0
+336,West Bengal,Prasun Banerjee,HOWRAH,Howrah,147000000.0
+337,Odisha,Pratap Chandra Sarangi,BALASORE,Balasore,147064254.11
+338,Maharashtra,Prataprao Jadhav,BULDHANA,Buldana,147000000.0
+339,West Bengal,Pratima Mondal,JOYNAGAR(SC),South Twenty Four Parganas,147000000.0
+340,Delhi,Praveen Khandelwal,CHANDINI CHOWK,Commissioner North Delhi Municipal Corporation,147470276.0
+341,Uttar Pradesh,Praveen Patel,PHULPUR,Allahabad,151559884.09
+342,Uttar Pradesh,Priya Saroj,MACHHLISHAHR(SC),Jaunpur,147000000.0
+343,Kerala,Priyanka Gandhi Vadra,WAYANAD,Wayanad,122500000.0
+344,Karnataka,Priyanka Satish Jarkiholi,CHIKKODI,Belagavi,147000000.0
+345,West Bengal,Prof Sougata Ray,DUM DUM,North Twenty Four Parganas,147000000.0
+346,Uttar Pradesh,Prof Sp Singh Baghel,AGRA(SC),Agra,147000000.0
+347,Uttar Pradesh,Pushpendra Saroj,KAUSHAMBI(SC),Kaushambi,147000000.0
+348,Andhra Pradesh,Putta Mahesh Kumar,ELURU,West Godavari,147000000.0
+349,Uttar Pradesh,R.K. Chaudhary,MOHANLALGANJ(SC),Lucknow,147000000.0
+350,Odisha,Rabindra Narayan Behera,JAJPUR(SC),Jajpur,147064617.11
+351,West Bengal,Rachna Banerjee,HOOGHLY,Hooghly,147000000.0
+352,Bihar,Radha Mohan Singh,PURVI CHAMPARAN,Mothihari (E.Champaran),147000000.0
+353,Karnataka,Radhakrishna,GULBARGA(SC),Gulbarga,147000000.0
+354,Chhattisgarh,Radhe Shyam Rathiya,RAIGARH(ST),Raigarh,159706972.09
+355,Uttar Pradesh,Rahul Gandhi,RAE BARELI,Rae Bareli,147000000.0
+356,Rajasthan,Rahul Kaswan,CHURU,Churu,147000000.0
+357,Madhya Pradesh,Rahul Singh Lodhi,DAMOH,Damoh,163058785.37
+358,Bihar,Raj Bhushan Choudhary,MUZAFFARPUR,Muzaffarpur,147000000.0
+359,Rajasthan,Raj Kumar Roat,BANSWARA(ST),Banswara,147000000.0
+360,Bihar,Raja Ram Singh,KARAKAT,Rohtas,147000000.0
+361,Maharashtra,Rajabhau,NASHIK,Nashik,152878682.11
+362,Himachal Pradesh,Rajeev Bhardwaj,KANGRA,Kangra,179388967.11
+363,Uttar Pradesh,Rajeev Rai,GHOSI,Mau,147000000.0
+364,Bihar,Rajesh Ranjan Alias Pappu Yadav,PURNEA,Purnea,147000000.0
+365,Bihar,Rajesh Verma,KHAGARIA,Khagaria,147000000.0
+366,Gujarat,Rajeshbhai Naranbhai Chudasama,JUNAGADH,Junagadh,147000000.0
+367,Bihar,Rajiv Pratap Rudy,SARAN,Saran,147000000.0
+368,Bihar,Rajiv Ranjan (Lalan) Singh,MUNGER,Patna,147000000.0
+369,Uttar Pradesh,Rajkumar Chahar,FATEHPUR SIKRI,Agra,147000000.0
+370,Uttar Pradesh,Rajnath Singh,LUCKNOW,Lucknow,154808797.11
+371,Gujarat,Rajpalsinh Mahendrasinh Jadav,PANCHMAHAL,Panchmahals,147000000.0
+372,West Bengal,Raju Bista,DARJEELING,Darjeeling,147000000.0
+373,Uttar Pradesh,Rakesh Rathor,SITAPUR,Sitapur,147000000.0
+374,Assam,Rakibul Hussain,DHUBRI,Dhubri,147000000.0
+375,Uttar Pradesh,Ram Prasad Chaudhary,BASTI,Basti,204176957.11
+376,Uttar Pradesh,Ram Shiromani,SHRAWASTI,Shrawasti,151746878.11
+377,Telangana,Ramasahayam Raghuram Reddy,KHAMMAM,Khammam,147000000.0
+378,Uttar Pradesh,Ramashankar Rajbhar,SALEMPUR,Deoria,160056927.07
+379,Uttar Pradesh,Rambhual Nishad,SULTANPUR,Sultanpur,151231957.11
+380,Uttar Pradesh,Ramesh Awasthi,KANPUR,Kanpur Nagar,147000000.0
+381,Karnataka,Ramesh Chandappa Jigajinagi,BIJAPUR(SC),Bijapur,269500000.0
+382,Bihar,Ramprit Mandal,JHANJHARPUR,Madhubani,147000000.0
+383,Delhi,Ramvir Singh Bidhuri,SOUTH DELHI,Commissioner South Delhi Municipal Corporation,147559100.0
+384,Assam,Ranjit Dutta,Sonitpur,Sonitpur,147000000.0
+385,Haryana,Rao Inderjit Singh,GURGAON,Rewari,147000000.0
+386,Rajasthan,Rao Rajendra Singh,JAIPUR RURAL,Jaipur,147000000.0
+387,Bihar,Ravi Shankar Prasad,PATNA SAHIB,Patna,147000000.0
+388,Maharashtra,Ravindra Dattaram Waikar,MUMBAI NORTH WEST,Mumbai Suburban,147000000.0
+389,Uttar Pradesh,Ravindra Shyamnarayan Alias Ravi Kishan Shukla,GORAKHPUR,Gorakhpur,147000000.0
+390,Maharashtra,Ravindra Vasantrao Chavan,NANDED,Nanded,147000000.0
+391,Mizoram,Richard Vanlalhmangaiha,MIZORAM (ST),Aizawl,147000000.0
+392,Tamil Nadu,Robert Bruce C,TIRUNELVELI,Tirunelveli,147475440.11
+393,Madhya Pradesh,Rodmal Nagar,RAJGARH,Rajgarh,147000000.0
+394,Chhattisgarh,Roop Kumari Choudhary,MAHASAMUND,Mahasamund,153035414.0
+395,Uttar Pradesh,Ruchi Vira,MORADABAD,Moradabad,147000000.0
+396,Odisha,Rudra Narayan Pany,DHENKANAL,Dhenkanal,155013957.11
+397,Nagaland,S Supongmeren Jamir,NAGALAND,Dimapur,147000000.0
+398,Tamil Nadu,S Venkatesan,MADURAI,Madurai,147000000.0
+399,Tamil Nadu,S. Jagathrakshakan,ARAKKONAM,Vellore,180589332.34
+400,Tamil Nadu,Sachithanantham R,DINDIGUL,Dindigul,147000000.0
+401,Karnataka,Sagar Eshwar Khandre,BIDAR,Bidar,147000000.0
+402,Meghalaya,Saleng A Sangma,TURA,West Garo Hills,147000000.0
+403,Odisha,Sambit Patra,PURI,Puri,147000000.0
+404,Uttar Pradesh,Sanatan Pandey,BALLIA,Ballia,180420041.4
+405,Maharashtra,Sanjay Dina Patil,MUMBAI NORTH EAST,Mumbai Suburban,147000000.0
+406,Maharashtra,Sanjay Haribhau Jadhav,PARBHANI,Parbhani,147000000.0
+407,Bihar,Sanjay Jaiswal,PASCHIM CHAMPARAN,Bettiah (W.Champaran),147000000.0
+408,Telangana,Sanjay Kumar Bandi,KARIMNAGAR,Karimnagar,172775317.11
+409,Jharkhand,Sanjay Seth,RANCHI,Ranchi,147064357.11
+410,Maharashtra,Sanjay Uttamrao Deshmukh,YAVATMAL-WASHIM,Yavatmal,185640423.0
+411,Rajasthan,Sanjna Jatav,BHARATPUR(SC),Bharatpur,147000000.0
+412,Chhattisgarh,Santosh Pandey,RAJNANDGAON,Rajnandgaon,147000000.0
+413,Odisha,Saptagiri Sankar Ulaka,KORAPUT(ST),Rayagada,269500000.0
+414,Punjab,Sarabjeet Singh Khalsa,FARIDKOT(SC),Faridkot,150850348.15
+415,Tamil Nadu,Sasikanth Senthil,TIRUVALLUR(SC),Tiruvallur,171500000.0
+416,Haryana,Satpal Brahamchari,SONEPAT,Sonepat,147000000.0
+417,West Bengal,Saumitra Khan,BISHNUPUR(SC),Bankura,147000000.0
+418,Madhya Pradesh,Savitri Thakur,DHAR(ST),Dhar,147000000.0
+419,West Bengal,Sayani Ghosh,JADAVPUR,South Twenty Four Parganas,147000000.0
+420,Haryana,Selja,SIRSA(SC),Sirsa,147000000.0
+421,Tamil Nadu,Selvaganapathi T M,SALEM,Salem,147000000.0
+422,Tamil Nadu,Selvaraj V,NAGAPATTINAM(SC),Thiruvarur,147000000.0
+423,Kerala,Shafi Parambil,VADAKARA,Kozhikode,147000000.0
+424,Bihar,Shambhavi,SAMASTIPUR(SC),Samastipur,147000000.0
+425,Madhya Pradesh,Shankar Lalwani,INDORE,Indore,147000000.0
+426,Uttar Pradesh,Shashank Mani,DEORIA,Deoria,147000000.0
+427,West Bengal,Shatrughan Sinha,ASANSOL,Burdwan,147000000.0
+428,Punjab,Sher Singh Ghubaya,FIROZPUR,Firozepur,147000000.0
+429,Madhya Pradesh,Shivmangal Singh Tomar,MORENA,Morena,147000000.0
+430,Madhya Pradesh,Shivraj Singh Chouhan,VIDISHA,Raisen,147000000.0
+431,Karnataka,Shobha Karandlaje,BANGALORE NORTH,Bengaluru Urban,147000000.0
+432,Gujarat,Shobhanaben Mahendrasinh Baraiya,SABARKANTHA,Sabarkantha,147000000.0
+433,Karnataka,Shreyas. M. Patel,HASSAN,Hassan,147000000.0
+434,Haryana,Shri Dharambir Singh,BHIWANI MAHENDRAGARH,Bhiwani,147000000.0
+435,West Bengal,Shri Abhishek Banerjee,DIAMOND HARBOUR,South Twenty Four Parganas,147000000.0
+436,Punjab,Shri Amar Singh,FATEHGARH SAHIB(SC),Fatehgarh Sahib,147000000.0
+437,Gujarat,Shri Amit Shah,GANDHINAGAR,Gandhinagar,147000000.0
+438,Madhya Pradesh,Shri Anil Firojiya,UJJAIN(SC),Ujjain,147000000.0
+439,Rajasthan,Shri Arjun Ram Meghwal,BIKANER(SC),Bikaner,147000000.0
+440,Uttar Pradesh,Shri Arun Kumar Sagar,SHAHJAHANPUR(SC),Shahjahanpur,147000000.0
+441,Karnataka,Shri B Y Raghavendra,SHIMOGA,Shivamogga,147000000.0
+442,Kerala,Shri Benny Behanan,CHALAKUDY,Ernakulam,164674770.11
+443,Odisha,Shri Bhartruhari Mahtab,CUTTACK,Cuttack,147000000.0
+444,Jharkhand,Shri Chandra Prakash Choudhary,GIRIDIH,Bokaro,147000000.0
+445,West Bengal,Shri Deepak (Dev) Adhikari,GHATAL,Paschimi Medinipur,200747364.0
+446,Punjab,Shri Gurjeet Singh Aujla,AMRITSAR,Amritsar,147000000.0
+447,Rajasthan,Shri Hanuman Beniwal,NAGAUR,Nagaur,147000000.0
+448,Kerala,Shri Hibi Eden,ERNAKULAM,Ernakulam,162177260.11
+449,Bihar,Shri Janardan Singh Sigriwal,MAHARAJGANJ_BR,Maharajganj_Br,147000000.0
+450,Odisha,Shri Jual Oram,SUNDARGARH (ST),Sundargarh,173096756.91
+451,Jammu And Kashmir,Shri Jugal Kishore Sharma,JAMMU,Jammu,147000000.0
+452,West Bengal,Shri Jyotirmay Singh Mahato,PURULIA,Purulia,147000000.0
+453,Tamil Nadu,Shri Karti P Chidambaram,SIVAGANGA,Sivaganga,159049284.11
+454,Kerala,Shri Kumbakudi Sudhakaran,KANNUR,Kannur,147000000.0
+455,Karnataka,Shri Ls Tejasvi Surya,BANGALORE SOUTH,Bengaluru Urban,147000000.0
+456,Kerala,Shri M K Raghavan,KOZHIKODE,Kozhikode,147000000.0
+457,Uttar Pradesh,Shri Narendra Modi,VARANASI,Varanasi,162070276.11
+458,Kerala,Shri Nk Premachandran,KOLLAM,Kollam,171477994.11
+459,Rajasthan,Shri Pp Chaudhary,PALI,Jodhpur,147000000.0
+460,Kerala,Shri Rajmohan Unnithan,KASARAGOD,Kasaragod,156754633.11
+461,Assam,Shri Sarbananda Sonowal (18Ls),DIBRUGARH,Dibrugarh,147000000.0
+462,Uttar Pradesh,Shri Satish Kumar Gautam,ALIGARH,Aligarh,147000000.0
+463,West Bengal,Shri Shantanu Thakur,BANGAON(SC),North Twenty Four Parganas,147000000.0
+464,Madhya Pradesh,Shri Sudheer Gupta,MANDSOUR,Mandsaur,148988014.83
+465,Kerala,Shri Suresh Kodikunnil,MAVELIKKARA(SC),Kollam,172429519.11
+466,Arunachal Pradesh,Shri Tapir Gao,ARUNACHAL EAST,Lohit,147000000.0
+467,Tamil Nadu,Shri Vijayakumar Vasanth,KANNIYAKUMARI,Kanniyakumari,171500000.0
+468,Maharashtra,Shrikant Eknath Shinde,KALYAN,Thane,147000000.0
+469,Maharashtra,Shrimant Chh Udayanraje Pratapsinhamaharaj Bhonsle,SATARA,Satara,147000000.0
+470,Goa,Shripad Yesso Naik,NORTH GOA,North Goa,147000000.0
+471,Maharashtra,Shrirang Appa Barne,MAVAL,Pune,147000000.0
+472,Maharashtra,Shyamkumar,RAMTEK(SC),Nagpur,147000000.0
+473,Andhra Pradesh,Sivanath Kesineni,VIJAYAWADA,Krishna,159864032.49
+474,West Bengal,Sk Nurul Islam,BASIRHAT,North Twenty Four Parganas,49000000.0
+475,Maharashtra,Smita Uday Wagh,JALGAON,Jalgaon,148107373.11
+476,Uttar Pradesh,Smt Anupriya Patel,MIRZAPUR,Mirzapur,147000000.0
+477,Odisha,Smt Aparajita Sarangi,BHUBANESWAR,Khordha,147420861.41
+478,Uttar Pradesh,Smt Dimple Yadav,MAINPURI,Mainpuri,192042469.11
+479,Punjab,Smt Harsimrat Kaur Badal,BHATINDA,Bhatinda,159775982.39
+480,Uttar Pradesh,Smt Hema Malini,MATHURA,Mathura,147000000.0
+481,Madhya Pradesh,Smt Himadri Singh,SHAHDOL (ST),Shahdol,150724861.11
+482,Gujarat,Smt Poonamben Hematbhai Maadam,JAMNAGAR,Jamnagar,147000000.0
+483,Maharashtra,Smt Raksha Nikhil Khadse,RAVER,Jalgaon,153112586.11
+484,Tamil Nadu,Smt S Jothimani,KARUR,Karur,147000000.0
+485,West Bengal,Smt Sajda Ahmed,ULUBERIA,Howrah,147000000.0
+486,Madhya Pradesh,Smt Sandhya Ray,BHIND(SC),Bhind,147000000.0
+487,Odisha,Smt Sangeeta Kumari Singh Deo,BOLANGIR,Bolangir,147000000.0
+488,West Bengal,Smt Satabdi Roy (Banerjee),BIRBHUM,Birbhum,147000000.0
+489,Maharashtra,Smt Supriya Sadanand Sule,BARAMATI,Pune,147000000.0
+490,Bihar,Smt Veena Devi,VAISHALI,Muzaffarpur,147000000.0
+491,Andhra Pradesh,Sribharat Mathukumli,VISAKHAPATNAM,Visakhapatnam,164841922.0
+492,Bihar,Sudama Prasad,ARRAH,Bhojpur(Arrah),147000000.0
+493,Tamil Nadu,Sudha R,MAYILADUTHURAI,Nagapattinam,147332315.11
+494,Bihar,Sudhakar Singh,BUXAR,Buxar,185211956.54
+495,West Bengal,Sudip Bandyopadhyay,KOLKATA UTTAR,Kolkata,147000000.0
+496,Odisha,Sukanta Kumar Panigrahi,KANDHAMAL,Kandhamal,190712424.11
+497,Jharkhand,Sukhdeo Bhagat,LOHARDAGA(ST),Ranchi,171821957.11
+498,Punjab,Sukhjinder Singh Randhawa,GURDASPUR,Gurdaspur,147000000.0
+499,Karnataka,Sunil Bose,CHAMARAJANAGAR(SC),Chamarajnagar,147000000.0
+500,Maharashtra,Sunil Dattatray Tatkare,RAIGAD,Raigad,147000000.0
+501,Bihar,Sunil Kumar,VALMIKI NAGAR,Bettiah (W.Champaran),147000000.0
+502,Bihar,Surendra Prasad Yadav,JAHANABAD,Jehanabad,155325714.0
+503,Kerala,Suresh Gopi,THRISSUR,Thrissoor,147000000.0
+504,Himachal Pradesh,Suresh Kumar Kashyap,SHIMLA (SC),Shimla,153563957.11
+505,Telangana,Suresh Kumar Shetkar,ZAHIRABAD,Medak,147000000.0
+506,Uttar Pradesh,Swami Sachchidanandhari Sakshi Ji Maharaj,UNNAO,Unnao,147000000.0
+507,Tamil Nadu,T Sumathy (A) Thamizhachi Thangapandian,CHENNAI SOUTH,Chennai,147000000.0
+508,Andhra Pradesh,Tangella Uday Srinivas,KAKINADA,East Godavari,199417886.76
+509,Uttar Pradesh,Tanuj Punia,BARABANKI(SC),Barabanki,148198170.11
+510,Bihar,Tariq Anwar,KATIHAR,Katihar,147000000.0
+511,Tamil Nadu,Thalikkottai Rajuthevar Baalu,SRIPERUMBUDUR,Kanchipuram,196905535.11
+512,Tamil Nadu,Thanga Tamilselvan,THENI,Theni,167755939.81
+513,Tamil Nadu,Tharaniventhan M S,ARANI,Tiruvannamalai,168337124.35
+514,Tamil Nadu,Thiru Dayanidhi Maran,CHENNAI CENTRAL,Chennai,147000000.0
+515,Tamil Nadu,Thirumaa Valavan Thol,CHIDAMBARAM(SC),Cuddalore,147000000.0
+516,Chhattisgarh,Tokhan Sahu,BILASPUR,Bilaspur,147000000.0
+517,Uttarakhand,Trivendra Singh Rawat,HARDWAR,Haridwar,147000000.0
+518,Uttar Pradesh,Ujjwal Raman Singh,ALLAHABAD,Allahabad,147000000.0
+519,Rajasthan,Ummeda Ram Beniwal,BARMER,Barmer,147000000.0
+520,Uttar Pradesh,Utkarsh Verma Madhur,KHERI,Kheri,147000000.0
+521,Tamil Nadu,V S Matheswaran,NAMAKKAL,Namakkal,162539930.11
+522,Karnataka,V. Somanna,TUMKUR,Tumakuru,147000000.0
+523,Puducherry,Vaithilingam Ve,Puducherry,Puducherry,209368972.11
+524,Telangana,Vamsi Krishna Gaddam,PEDDAPALLE,Peddapally,148451721.11
+525,Haryana,Varun Chaudhry,AMBALA (SC),Ambala,255454264.0
+526,Kerala,Vellalath Kochukrishnan Nair Sreekandan,PALAKKAD,Palakkad,167807990.11
+527,Chhattisgarh,Vijay Baghel,DURG,Durg,147000000.0
+528,Uttar Pradesh,Vijay Kumar Dubey,KUSHI NAGAR,Kushinagar (Padrauna),148900000.0
+529,Jharkhand,Vijay Kumar Hansdak,RAJMAHAL(ST),Sahebganj,147223957.11
+530,Bihar,Vijaylakshmi Devi,SIWAN,Siwan,147000000.0
+531,Gujarat,Vinod Chavda,KACHCHH(SC),Kachchh,147000000.0
+532,Uttar Pradesh,Vinod Kumar Bind,BHADOHI,Bhadohi,147000000.0
+533,Madhya Pradesh,Virendra Kumar,TIKAMGARH(SC),Tikamgarh,147000000.0
+534,Uttar Pradesh,Virendra Singh,CHANDAULI,Chandauli,147000000.0
+535,Maharashtra,Vishal,SANGLI,Sangli,147000000.0
+536,Jharkhand,Vishnu Dayal Ram,PALAMU(SC),Palamau,158176083.11
+537,Madhya Pradesh,Vishnu Dutt Sharma,KHAJURAHO,Chhatarpur,147000000.0
+538,Karnataka,Vishweshwar Hegde Kageri,UTTARA KANNADA,Uttar Kannad,147000000.0
+539,Bihar,Vivek Thakur,NAWADA,Nawada,147000000.0
+540,Andhra Pradesh,Y S Avinash Reddy,KADAPA,Cuddapah,156430260.11
+541,Karnataka,Yaduveer Krishnadatta Chamaraja Wadiyar,MYSORE,Mysore,147000000.0
+542,Delhi,Yogendra Chandoliya,NORTH WEST DELHI(SC),Commissioner North Delhi Municipal Corporation,147876307.0
+543,Uttar Pradesh,Zia Ur Rehman,SAMBHAL,Bhimnagar(Sambhal),147000000.0

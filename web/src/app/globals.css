@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Public+Sans:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-public-sans: 'Public Sans', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden; /* App layout manages scroll in main viewport */
+  font-family: var(--font-public-sans);
+  background-color: #fafafa; /* Solid clean light canvas */
+  color: #09090b; /* Crisp zinc-950 */
+}
+
+/* ---------------------------------------------------------------------------
+   Clean Minimal Solid Light Cards (No Glassmorphism, No Blur)
+   --------------------------------------------------------------------------- */
+.glass-card,
+.glass-card-dark,
+.glass-card-gradient,
+.clean-card {
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7; /* border-zinc-200 */
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.glass-card:hover,
+.glass-card-dark:hover,
+.clean-card:hover {
+  border-color: #d4d4d8; /* border-zinc-300 */
+}
+
+/* Clean Monochrome Action Utilities */
+.btn-primary-mono {
+  background-color: #09090b;
+  color: #ffffff;
+  font-weight: 600;
+  border: 1px solid #09090b;
+  transition: all 0.15s ease;
+}
+
+.btn-primary-mono:hover {
+  background-color: #27272a;
+  color: #ffffff;
+}
+
+.btn-secondary-mono {
+  background-color: #f4f4f5;
+  color: #09090b;
+  border: 1px solid #e4e4e7;
+  transition: all 0.15s ease;
+}
+
+.btn-secondary-mono:hover {
+  background-color: #e4e4e7;
+  border-color: #d4d4d8;
+}
+
+/* Minimal Hover Lift */
+.hover-lift {
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-1px);
+  border-color: #a1a1aa;
+}
+
+/* Minimal Light Scrollbars */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #fafafa;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+}
+
+/* Chat Markdown Typography (Light Minimal) */
+.chat-markdown {
+  color: #27272a;
+}
+
+.chat-markdown strong {
+  font-weight: 700;
+  color: #09090b;
+}
+
+.chat-markdown ul {
+  margin: 0.375rem 0;
+  padding-left: 1.25rem;
+}
+
+.chat-markdown li {
+  margin: 0.125rem 0;
+  color: #3f3f46;
+}
+
+.chat-markdown p + p {
+  margin-top: 0.375rem;
+}
+
+.chat-markdown code {
+  background-color: #f4f4f5;
+  color: #09090b;
+  border: 1px solid #e4e4e7;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.8em;
+}
+
+/* Card press-down feedback */
+.press-down {
+  transition: transform 0.1s ease;
+}
+
+.press-down:active {
+  transform: scale(0.98);
+}

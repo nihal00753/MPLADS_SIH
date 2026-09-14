@@ -1,0 +1,107 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role {
+  MP
+  DISTRICT
+  STATE
+  MINISTRY
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String   @default("$2a$10$wN31a2Y9Z3Q7.zLpA0Qe1uI9eH5oQzM8P1jZ4R8vY2xL7fN4qYx6") // "admin123"
+  role      Role     // MP | DISTRICT | STATE | MINISTRY
+  scopeId   String?  // constituencyId / districtId / stateId, null for Ministry
+  name      String
+  language  String   @default("en") // for vernacular toggle
+  createdAt DateTime @default(now())
+}
+
+model Constituency {
+  id              String   @id
+  name            String
+  districtId      String
+  allocatedAmount Decimal
+  mpId            String
+}
+
+model District {
+  id      String @id
+  name    String
+  stateId String
+}
+
+model State {
+  id   String @id
+  name String
+}
+
+model Work {
+  id             String   @id @default(cuid())
+  title          String
+  category       String   // road, water, hall, etc — mapped to a shared taxonomy for cross-scheme matching
+  constituencyId String
+  vendorId       String
+  sanctionedAmt  Decimal
+  spentAmt       Decimal
+  status         String   // SANCTIONED | IN_PROGRESS | COMPLETED | DELAYED
+  latitude       Float?
+  longitude      Float?
+  createdAt      DateTime @default(now())
+}
+
+model Vendor {
+  id       String  @id
+  name     String
+  gstin    String?
+  district String
+}
+
+model Alert {
+  id            String   @id @default(cuid())
+  workId        String
+  riskScore     Float          // 0–1, from MLServiceClient
+  severity      String         // LOW | MEDIUM | HIGH
+  reason        String         // plain-language explanation, from ML service
+  source        String         // AI_FLAGGED | CITIZEN_REPORTED
+  status        String         // OPEN | ACTIONED | ESCALATED | DISMISSED
+  dismissReason String?
+  slaDeadline   DateTime
+  createdAt     DateTime @default(now())
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  alertId   String
+  actorId   String
+  action    String
+  note      String?
+  createdAt DateTime @default(now())
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  userId    String
+  type      String   // NEW_ALERT | SLA_WARNING | ESCALATED | DIGEST
+  message   String
+  workId    String?
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model Complaint {
+  id        String   @id
+  workId    String?
+  text      String
+  clusterId String?
+  urgency   String
+  createdAt DateTime @default(now())
+}
