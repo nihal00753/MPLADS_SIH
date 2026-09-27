@@ -36,8 +36,8 @@ export function createDemoToken(user: DemoUser): string {
     iat: Math.floor(Date.now() / 1000),
     exp: Math.floor(Date.now() / 1000) + 86400,
   };
-  const header = btoa(JSON.stringify({ alg: 'none', typ: 'JWT' }));
-  const body = btoa(JSON.stringify(payload));
+  const header = Buffer.from(JSON.stringify({ alg: 'none', typ: 'JWT' }), 'utf-8').toString('base64');
+  const body = Buffer.from(JSON.stringify(payload), 'utf-8').toString('base64');
   return `${header}.${body}.demo`;
 }
 
@@ -45,7 +45,7 @@ export function decodeDemoToken(token: string): DemoUser | null {
   try {
     const parts = token.split('.');
     if (parts.length < 2) return null;
-    const payload = JSON.parse(atob(parts[1]));
+    const payload = JSON.parse(Buffer.from(parts[1], 'base64').toString('utf-8'));
     if (payload.exp && payload.exp < Date.now() / 1000) return null;
     return payload as DemoUser;
   } catch {
