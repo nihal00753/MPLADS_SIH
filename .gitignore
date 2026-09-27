@@ -32,6 +32,7 @@ ENV/
 .env.*
 !.env.example
 !server/.env.example
+!web/.env.example
 
 # FAISS vector store cache (generated locally by indexer.py)
 mplads_ai/rag/_index/

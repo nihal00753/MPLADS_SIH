@@ -13,9 +13,12 @@ export async function POST(req: NextRequest) {
 
   const question = body.question || '';
 
+  const fastApiBase = process.env.FASTAPI_URL || 'http://127.0.0.1:8000';
+  const backendBase = process.env.BACKEND_URL || 'http://127.0.0.1:5000';
+
   try {
     // 1. Call FastAPI directly (fastest, direct RAG + Gemini pipeline)
-    const fastApiRes = await fetch('http://127.0.0.1:8000/api/query/ask', {
+    const fastApiRes = await fetch(`${fastApiBase}/api/query/ask`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ question }),
@@ -33,7 +36,7 @@ export async function POST(req: NextRequest) {
   try {
     // 2. Fallback to Express backend if FastAPI is busy or restarting
     const authHeader = req.headers.get('authorization');
-    const expressRes = await fetch('http://127.0.0.1:5000/api/ml/nl-query', {
+    const expressRes = await fetch(`${backendBase}/api/ml/nl-query`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
